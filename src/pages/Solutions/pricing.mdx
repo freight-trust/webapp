@@ -7,12 +7,33 @@ description: Simple Pricing
 SPDXVersion: SPDX-2.2
 SPDX-FileCopyrightText: Copyright 2020 FreightTrust and Clearing Corporation -->
 
-<PageDescription>
+<!-- SPDX-License-Identifier: Apache-2.0
+SPDXVersion: SPDX-2.2
+SPDX-FileCopyrightText: Copyright 2020 FreightTrust and Clearing Corporation -->
 
+import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
+import {
+  ArticleContainer,
+  CustomArticleCard,
+  BrandsList,
+  SnapContent,
+  SnapCard,
+  SignUpContainer,
+  BannerContainer,
+  RequestDemoContent,
+  TextImage,
+} from 'gatsby-theme-carbon/src/templates/HomepageComponents';
+import { Button } from 'carbon-components-react';
 
-Pricing for EDI Messages
+export default HomepageTemplate;
 
-</PageDescription>
+<BannerContainer
+  title="ASC X12 - An Offical Corporate Partner"
+  content="The standard to EDI, powering more than 3 trillion in commerce"
+  buttonLabel="Get Started Today"
+  href="https://freight.page.link/request-information"
+>
+</BannerContainer>
 
 
 ## X12 Transaction Sets
