@@ -1,9 +1,9 @@
-- title: Features
+- title: Trade Finance
   pages:
-    - path: https://freight.page.link/request-information
+    - path: /Finance/trade-finance
 - title: Solutions
   pages:
-    - path: https://freight.page.link/request-information
+    - path: /Solutions/index
 - title: Marketplace
   pages:
     - title: Marketplace Integrations
@@ -11,8 +11,8 @@
 - title: Corporate
   pages:
     - title: Corporate Information
-      path: https://freight.page.link/request-information
+      path: /Corporate/corporate
 - title: Data
   pages:
     - title: Global Container Index
-      path: https://freight.page.link/request-information
+      path: /freight/drewry
