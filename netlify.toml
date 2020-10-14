@@ -16,7 +16,10 @@
     pretty_urls = true
   [build.processing.images]
     compress = true
-
+    
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
+  
  [headers]
 # Define which paths this specific [[headers]] block will cover.
   for = "/*"
