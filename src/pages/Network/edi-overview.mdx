@@ -34,8 +34,11 @@ export default HomepageTemplate;
 </BannerContainer>
 
 
-## Code Elements
-
+<ArticleContainer
+  title="Code Elements"
+  subTitle="General Data Elements"
+>
+<Row>
 N101 is assigned a non-built-in XSD data type consisting of the literal "DE\_"
 and the data element number. The resulting DE_98 is used to define the available
 internal code values and their descriptions.
@@ -63,9 +66,15 @@ Loan Applicant
 </xs:annotation>
 </xs:enumeration>
 ```
+</Row>
+</ArticleContainer>
 
-## X12 Data Type Elements
 
+<ArticleContainer
+  title="X12 Data Type Elements"
+  subTitle="ASC X12"
+>
+<Row>
 In the example above, DE_98 is assigned a non-built-in XSD data type of ID. Note
 that there isn't a minimum or maximum length. The enumerations themselves
 specify length. The following illustrates the method of defining X12 data types
@@ -89,8 +98,15 @@ An identifier data element always contains a unique value from a single, predefi
 <xs:restriction base="xs:string"/>
 </xs:simpleType>
 ```
+</Row>
+</ArticleContainer>
 
-## X12 Namespace
+
+<ArticleContainer
+  title="X12 Namespaces"
+  subTitle="ASC X12"
+>
+<Row>
 
 Many, but not all, of the properties specified in X12.6 map accurately to XML
 without change. For example, X12 data element types, such as date, do not
@@ -126,7 +142,16 @@ As illustrated above, this special consideration is used for dates, but also for
 times for similar reasons. Additionally it is used for numeric and decimal types
 to accommodate implied decimal positions and an optional sign.
 
-## Segment Elements
+
+</Row>
+</ArticleContainer>
+
+
+<ArticleContainer
+  title="X12 Segment Elements"
+  subTitle="ASC X12"
+>
+<Row>
 
 In the example above, the N1 segment is the first segment in Loop_1-0700.
 
@@ -149,3 +174,5 @@ Party Identification
 Code identifying an organizational entity, a physical location, property or an individual
 </xs:documentation>
 ```
+</Row>
+</ArticleContainer>
