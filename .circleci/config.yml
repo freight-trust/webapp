@@ -1,26 +1,55 @@
+version: 2.1
 
-# circle-ci nodejs build 
-version: 2
-jobs:
-  build:
+executors:
+  default:
     docker:
       - image: circleci/node:12
     working_directory: ~/gatsby-site
+    environment:
+      YARN_CACHE_FOLDER: "~/.cache/yarn"
+
+commands:
+  attach_gatsby:
+    steps:
+      - attach_workspace:
+          at: ~/gatsby-site
+
+jobs:
+  install-dependencies:
+    executor: default
     steps:
       - checkout
+      - attach_gatsby
       - restore_cache:
           keys:
-            # Find a cache corresponding to this specific package-lock.json
-            - v1-npm-deps-{{ checksum "package-lock.json" }}
-            # Fallback cache to be used
-            - v1-npm-deps-
+            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-v1-{{ .Branch }}-
+            - yarn-packages-v1-
       - run:
-          name: Install Dependencies
-          command: npm install
+          name: Install gatsby dependencies
+          command: yarn install --frozen-lockfile
       - save_cache:
-          key: v1-npm-deps-{{ checksum "package-lock.json" }}
-          paths:
-            - ./node_modules
+          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths: ~/.cache/yarn
+      - persist_to_workspace:
+          root: .
+          paths: .
+
+  build-packages:
+    executor: default
+    steps:
+      - attach_gatsby
       - run:
-          name: Gatsby Build
+          name: Build packages
+          command: yarn install 
+      - run:
+          name: Yarn Gatsby Build 
           command: yarn run build
+
+workflows:
+  build-and-test:
+    jobs:
+      - install-dependencies
+      - build-packages:
+          requires:
+            - install-dependencies
