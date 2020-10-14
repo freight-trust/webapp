@@ -19,7 +19,6 @@
     
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
-  package = "netlify-plugin-checklinks"
   
  [headers]
 # Define which paths this specific [[headers]] block will cover.
