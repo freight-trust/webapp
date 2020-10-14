@@ -27,13 +27,6 @@ module.exports = {
   pathPrefix: `/gtc`,
   plugins: [
     {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        enableIdentityWidget: true,
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Freight Trust Network`,
@@ -78,7 +71,7 @@ module.exports = {
       options: {
         repository: {
           baseUrl: `https://github.com/carbon-design-system/gatsby-theme-carbon`,
-          // TODO: fix gatsby theme to not use example...
+          // TODO fix gatsby theme to not use example...
           subDirectory: `/packages/example`,
         },
         iconPath: `./src/images/favicon.png`,
@@ -132,8 +125,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Freight Trust and Clearing`,
+        short_name: `FreightTrust`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
@@ -150,7 +143,6 @@ module.exports = {
       resolve: `gatsby-plugin-sentry`,
       options: {
         dsn: `https://da062102387d49a398de9497332e059c@o418752.ingest.sentry.io/5324296`,
-        // TODO: Enable React SDK , see gitlab.com/fr8/ft-gatsby#issues
         // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
         environment: process.env.NODE_ENV,
         enabled: (() =>
@@ -177,7 +169,7 @@ module.exports = {
         },
         twitter: {
           handle: `@freighttrustnet`,
-          site: `@freighttrust.com`,
+          site: `https://freighttrust.com`,
           cardType: `app`,
         },
       },
