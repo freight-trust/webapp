@@ -1,0 +1,17 @@
+# dependabot.yml
+# Specify labels for pull requests
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/src/gatsby-theme-carbon"
+    schedule:
+      interval: "daily"
+      time: "17:29"
+      timezone: "America/Chicago"
+    labels:
+      - "dependencies"
+      # Add default Kodiak `merge.automerge_label`
+      - "automerge"
+    allow:
+      - dependency-name: "@carbon"
+      - dependency-name: "carbon"

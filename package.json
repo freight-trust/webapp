@@ -120,6 +120,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.5.2",
     "babel-preset-gatsby": "^0.5.8",
     "codecov": "^3.8.0",
     "eslint": "7.8.1",
@@ -139,6 +140,7 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "husky": "^4.3.0",
     "jasmine-core": "^3.6.0",
+    "jest": "^26.5.3",
     "karma": "^5.2.3",
     "karma-coverage": "^2.0.3",
     "karma-jasmine": "^4.0.1",
