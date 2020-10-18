@@ -1,3 +1,13 @@
+bin/
+.repo/
+CI/
+static/
+.github/
+.cache/
+public/
+docs/
+lambdas/
+
 src/gatsby-theme-carbon/components/Tabs/Tabs.js
 # exclude eslint configuration file if its in *.js
 !.eslintrc.js
