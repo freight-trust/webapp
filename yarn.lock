@@ -3464,7 +3464,7 @@ babel-plugin-extract-import-names@^2.0.0-next.8:
   dependencies:
     "@babel/helper-plugin-utils" "7.10.4"
 
-babel-plugin-lodash@3.3.4:
+babel-plugin-lodash@3.3.4, babel-plugin-lodash@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/babel-plugin-lodash/-/babel-plugin-lodash-3.3.4.tgz#4f6844358a1340baed182adbeffa8df9967bc196"
   integrity sha512-yDZLjK7TCkWl1gpBeBGmuaDIFhZKmkoL+Cu2MUUjv5VxUZx/z7tBGBCBcQs5RI1Bkz5LLmNdjx7paOyQtMovyg==
@@ -6634,10 +6634,10 @@ eslint-config-carbon-base@1.0.1:
   resolved "https://registry.yarnpkg.com/eslint-config-carbon-base/-/eslint-config-carbon-base-1.0.1.tgz#3cc3a930202889be4d2bf6bb223eea7c3dda389a"
   integrity sha1-PMOpMCAoib5NK/a7Ij7qfD3aOJo=
 
-eslint-config-prettier@6.12.0:
-  version "6.12.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.12.0.tgz#9eb2bccff727db1c52104f0b49e87ea46605a0d2"
-  integrity sha512-9jWPlFlgNwRUYVoujvWTQ1aMO8o6648r+K7qU7K5Jmkbyqav1fuEZC0COYpGBxyiAJb65Ra9hrmFx19xRGwXWw==
+eslint-config-prettier@6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.11.0.tgz#f6d2238c1290d01c859a8b5c1f7d352a0b0da8b1"
+  integrity sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -6781,12 +6781,13 @@ eslint-plugin-mdx@^1.8.2:
   optionalDependencies:
     rebass "^4.0.7"
 
-eslint-plugin-prettier@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.4.tgz#168ab43154e2ea57db992a2cd097c828171f75c2"
-  integrity sha512-jZDa8z76klRqo+TdGDTFJSavwbnWK2ZpqGKNZ+VvweMW516pDUMmQ2koXvxEE4JhzNvTv+radye/bWGBmA6jmg==
+eslint-plugin-prettier@^2.1.2:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.7.0.tgz#b4312dcf2c1d965379d7f9d5b5f8aaadc6a45904"
+  integrity sha512-CStQYJgALoQBw3FsBzH0VOVDRnJ/ZimUlpLm226U8qgqYJfPOY/CPK6wyRInMxh73HSKg5wyRwdS4BVYYHwokA==
   dependencies:
-    prettier-linter-helpers "^1.0.0"
+    fast-diff "^1.1.1"
+    jest-docblock "^21.0.0"
 
 eslint-plugin-react-hooks@^1.7.0:
   version "1.7.0"
@@ -7283,7 +7284,7 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-diff@^1.1.2:
+fast-diff@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
   integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
@@ -8002,6 +8003,15 @@ gatsby-plugin-iubenda-cookie-footer@^1.1.1:
   dependencies:
     "@babel/runtime" "^7.4.3"
 
+gatsby-plugin-lodash@^3.3.13:
+  version "3.3.13"
+  resolved "https://registry.npmjs.org/gatsby-plugin-lodash/-/gatsby-plugin-lodash-3.3.13.tgz#9c59d86528416d6fbdb596185f7ae7012e9ca01c"
+  integrity sha512-/my49PU5UAGItg3xr06fOD/uLdIRV8XJfJbnUkl9TBaabO1xQYXRnUVlXdPjFt9wvKeXDwTvlrdcHPqnV9JZ1g==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    babel-plugin-lodash "^3.3.4"
+    lodash-webpack-plugin "^0.11.5"
+
 gatsby-plugin-lunr@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-lunr/-/gatsby-plugin-lunr-1.5.2.tgz#eaeba70b85294827e031070c9bad70a93226e509"
@@ -8158,10 +8168,34 @@ gatsby-plugin-sentry@^1.0.1:
   dependencies:
     "@sentry/browser" latest
 
-gatsby-plugin-sharp@^2.5.3, gatsby-plugin-sharp@^2.6.40:
+gatsby-plugin-sharp@^2.5.3:
   version "2.6.42"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.6.42.tgz#94556e8633a7d15299d6aa8dc5e9a686af8debfb"
   integrity sha512-uqra+GDLEfE5Kv8Th1lkQKS6FIRwPzwipoWJBogfPLTnl0L3t+ogdEhN8p5d7G6SYoaukuGrix162mbQXqASBA==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    async "^3.2.0"
+    bluebird "^3.7.2"
+    fs-extra "^9.0.1"
+    gatsby-core-utils "^1.3.23"
+    got "^10.7.0"
+    imagemin "^7.0.1"
+    imagemin-mozjpeg "^9.0.0"
+    imagemin-pngquant "^9.0.1"
+    lodash "^4.17.20"
+    mini-svg-data-uri "^1.2.3"
+    potrace "^2.1.8"
+    probe-image-size "^5.0.0"
+    progress "^2.0.3"
+    semver "^7.3.2"
+    sharp "^0.25.4"
+    svgo "1.3.2"
+    uuid "3.4.0"
+
+gatsby-plugin-sharp@^2.6.43:
+  version "2.6.43"
+  resolved "https://registry.npmjs.org/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.6.43.tgz#dd7f4fcf848337e64a014f491318f61d530a38a8"
+  integrity sha512-/V5T8SzS/GgpQEgp34blLwzwpc+dxJJVPRXGBOZtKdcTDRAfCYuY2IuRf5FJa65lSuPRQmHdG6AoQIka/0xnWA==
   dependencies:
     "@babel/runtime" "^7.11.2"
     async "^3.2.0"
@@ -8525,6 +8559,19 @@ gatsby-transformer-remark@^2.8.27:
     unist-util-remove-position "^1.1.4"
     unist-util-select "^1.5.0"
     unist-util-visit "^1.4.1"
+
+gatsby-transformer-sharp@^2.5.18:
+  version "2.5.18"
+  resolved "https://registry.npmjs.org/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.5.18.tgz#abce2d63bdc34b336a970a205c9f558af649edf4"
+  integrity sha512-TwcSoO4XRYB8e9gvQyjQgwCYfGTsPuGKQdY+LUXDKpoAnwICmf7CCbOD2eBx8iFibfXSGlyEKpWd8EaWxM0QCw==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    bluebird "^3.7.2"
+    fs-extra "^9.0.1"
+    potrace "^2.1.8"
+    probe-image-size "^5.0.0"
+    semver "^7.3.2"
+    sharp "^0.25.4"
 
 gatsby-transformer-yaml@^2.3.1:
   version "2.4.14"
@@ -10736,6 +10783,11 @@ jest-diff@^25.5.0:
     jest-get-type "^25.2.6"
     pretty-format "^25.5.0"
 
+jest-docblock@^21.0.0:
+  version "21.2.0"
+  resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-21.2.0.tgz#51529c3b30d5fd159da60c27ceedc195faf8d414"
+  integrity sha512-5IZ7sY9dBAYSV+YjQ0Ovb540Ku7AO9Z5o2Cg789xj167iQuZ2cG+z0f3Uct6WeYLbU6aQiM2pCs7sZ+4dotydw==
+
 jest-get-type@^25.2.6:
   version "25.2.6"
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-25.2.6.tgz#0b0a32fab8908b44d508be81681487dbabb8d877"
@@ -11211,6 +11263,13 @@ lodash-es@4.17.15, lodash-es@^4.17.14:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
   integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+
+lodash-webpack-plugin@^0.11.5:
+  version "0.11.5"
+  resolved "https://registry.npmjs.org/lodash-webpack-plugin/-/lodash-webpack-plugin-0.11.5.tgz#c4bd064b4f561c3f823fa5982bdeb12c475390b9"
+  integrity sha512-QWfEIYxpixOdbd6KBe5g6MDWcyTgP3trDXwKHFqTlXrWiLcs/67fGQ0IWeRyhWlTITQIgMpJAYd2oeIztuV5VA==
+  dependencies:
+    lodash "^4.17.4"
 
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
@@ -13981,13 +14040,6 @@ prettier-eslint@^11.0.0:
     typescript "^3.9.3"
     vue-eslint-parser "~7.1.0"
 
-prettier-linter-helpers@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
-  integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
-  dependencies:
-    fast-diff "^1.1.2"
-
 prettier@2.1.2, prettier@^2.0.0, prettier@^2.0.5:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
@@ -14373,9 +14425,9 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.8.1:
+react-dom@16.14.0:
   version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
   integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
   dependencies:
     loose-envify "^1.1.0"
@@ -14647,7 +14699,7 @@ react-use@^15.3.4:
     ts-easing "^0.2.0"
     tslib "^2.0.0"
 
-react@^16.8.0, react@^16.8.1:
+react@^16.14.0, react@^16.8.0:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
