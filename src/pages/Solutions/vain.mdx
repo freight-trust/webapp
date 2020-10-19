@@ -3,18 +3,49 @@ title: VAIN
 description: Demonstration of some of the theme components in action.
 ---
 
-<PageDescription>
+<!-- SPDX-License-Identifier: Apache-2.0
+SPDXVersion: SPDX-2.2
+SPDX-FileCopyrightText: Copyright 2020 FreightTrust and Clearing Corporation -->
 
-AS2.Network and the VAN of the Future 
+import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
+import {
+  ArticleContainer,
+  CustomArticleCard,
+  BrandsList,
+  SnapContent,
+  SnapCard,
+  SignUpContainer,
+  BannerContainer,
+  RequestDemoContent,
+  TextImage,
+} from 'gatsby-theme-carbon/src/templates/HomepageComponents';
+import { Button } from 'carbon-components-react';
 
-</PageDescription>
+export default HomepageTemplate;
 
-<AnchorLinks>
-  <AnchorLink>Building bonds</AnchorLink>
-  <AnchorLink>Global accessibility standards</AnchorLink>
-  <AnchorLink>Small anchor links</AnchorLink>
-  <AnchorLink>Videos</AnchorLink>
-</AnchorLinks>
+<BannerContainer
+  title="VAN 2.0 - Value ADded Iterative Networks"
+  content="Compounding Network Effects bring about new  opportunities "
+  buttonLabel="Get Started Today"
+  href="https://freight.page.link/request-information"
+>
+
+
+</BannerContainer>
+
+
+<RequestDemoContent
+  title="US & Canadian Customs"
+  subTitle="Get Direct data exchange with national customs and government authorities"
+  buttonLabel="Find out more"
+  href="https://freight.page.link/request-information"></RequestDemoContent>
+
+<SnapContent
+  title="Solving the Hardest Problems in Supply Chain
+  "
+>
+<Row>
+
 
 <Row>
 <Column colMd={4} colLg={4} noGutterMdLeft>
@@ -138,3 +169,24 @@ costs.
 
 Central monitoring is also a key benefit, as Freight Trust will deal quickly and
 efficiently with any connection issues and technical support needs.
+
+
+<TextImage
+  title="Validation out-of-the box."
+  content="All models can be modified to match any partner-specific format"
+  buttonLabel="Find out more"
+  href="https://freight.page.link/request-information"></TextImage>
+
+  <RequestDemoContent
+  title="Comply with the standard EDI rules"
+  subTitle="Get instant validation details per message, segment and data element"
+>
+
+
+  <Button href="https://freight.page.link/request-information" kind="secondary">
+    Request Information
+  </Button>
+  <Button href="https://freight.page.link/request-information" kind="tertiary">
+    Contact Us
+  </Button>
+</RequestDemoContent>
