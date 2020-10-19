@@ -24,8 +24,9 @@ import './src/styles/index.scss';
 export const wrapRootElement = ({ element }) => (
   <AuthProvider
     navigate={navigate}
-    auth0_domain="freight-trust.auth0.com"
-    auth0_client_id="hcf0P8AXTt5NZu1c0NEdscZ2Y8IuX6jf">
+    AUTH0_DOMAIN='https://freight-trust.auth0.com'
+    AUTH0_CLIENT_ID='RtJg0pR14hcv7BRkMD4ZibbHUV3bYrfc'
+    AUTH0_CALLBACK_URL='https://freighttrust.com/dashboard'>
     {element}
   </AuthProvider>
 );
