@@ -41,15 +41,25 @@ jobs:
       - attach_gatsby
       - run:
           name: Build packages
-          command: yarn add global codecov &&  yarn install 
+          command: yarn install 
       - run:
           name: Yarn Gatsby Build 
-          command: yarn run build && codecov
-
+          command: yarn run build
+   ci-test:
+    executor: default
+    steps:
+      - attach_gatsby
+      - run:
+          name: Analyze
+          command: yarn run pretest
+          
 workflows:
   build-and-test:
     jobs:
       - install-dependencies
       - build-packages:
+          requires:
+            - install-dependencies
+      - ci-test:
           requires:
             - install-dependencies
