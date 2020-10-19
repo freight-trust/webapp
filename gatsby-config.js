@@ -37,6 +37,9 @@ module.exports = {
         display: `browser`,
       },
     },
+   { 
+      resolve: `gatsby-plugin-typescript`.
+   },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
