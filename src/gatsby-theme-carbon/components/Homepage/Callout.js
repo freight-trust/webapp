@@ -29,9 +29,9 @@ const StyledGrid = styled(Grid)`
     color: ${(props) =>
       props.theme.colors[props.color] ||
       props.color ||
-      props.theme.colors.inverse01}};
+      props.theme.colors.inverse01};
     width: 100%;
-    max-width: 100%;
+    max-width: 100%;}
 `;
 
 const HomepageCallout = ({ leftText, rightText, ...rest }) => (
