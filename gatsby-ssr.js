@@ -24,9 +24,9 @@ import { AuthProvider } from 'react-use-auth';
 export const wrapRootElement = ({ element }) => (
   <AuthProvider
     navigate={navigate}
-    AUTH0_DOMAIN='https://freight-trust.auth0.com'
-    AUTH0_CLIENT_ID='RtJg0pR14hcv7BRkMD4ZibbHUV3bYrfc'
-    AUTH0_CALLBACK_URL='https://freighttrust.com/dashboard'>
+    AUTH0_DOMAIN="https://freight-trust.auth0.com"
+    AUTH0_CLIENT_ID="RtJg0pR14hcv7BRkMD4ZibbHUV3bYrfc"
+    AUTH0_CALLBACK_URL="https://freighttrust.com/dashboard">
     {element}
   </AuthProvider>
 );
