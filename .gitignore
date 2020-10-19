@@ -9,7 +9,7 @@
 *.tar.bz
 
 # dotenv environment variables file
-.env
+#.env
 
 
 
