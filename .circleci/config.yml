@@ -41,10 +41,10 @@ jobs:
       - attach_gatsby
       - run:
           name: Build packages
-          command: yarn add global codecov &&  yarn install 
+          command: yarn install 
       - run:
           name: Yarn Gatsby Build 
-          command: yarn run build && codecov
+          command: yarn run build
 
 workflows:
   build-and-test:
