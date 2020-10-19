@@ -45,6 +45,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -77,6 +78,8 @@ module.exports = {
     {
       resolve: `gatsby-theme-carbon`,
       options: {
+        mdxExtensions: ['.mdx'],
+        isServiceWorkerEnabled: true,
         repository: {
           baseUrl: `https://github.com/carbon-design-system/gatsby-theme-carbon`,
           // TODO fix gatsby theme to not use example...
