@@ -17,6 +17,10 @@
  *  limitations under the License.
  */
 
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   siteMetadata: {
     title: `Freight Trust & Clearing Corporation`,
