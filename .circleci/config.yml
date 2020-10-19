@@ -1,58 +1,14 @@
-# circleci
-
-version: 2.1
-
-executors:
-  default:
-    docker:
-      - image: circleci/node:12
-    working_directory: ~/gatsby-site
-    environment:
-      YARN_CACHE_FOLDER: "~/.cache/yarn"
-
-commands:
-  attach_gatsby:
-    steps:
-      - attach_workspace:
-          at: ~/gatsby-site
-
+version: 2
 jobs:
-  install-dependencies:
-    executor: default
-    steps:
-      - checkout
-      - attach_gatsby
-      - restore_cache:
-          keys:
-            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-v1-{{ .Branch }}-
-            - yarn-packages-v1-
-      - run:
-          name: Install gatsby dependencies
-          command: npm install --global gatsby-cli yarn install
-      - save_cache:
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          paths: ~/.cache/yarn
-      - persist_to_workspace:
-          root: .
-          paths: .
-
-  build-packages:
-    executor: default
-    steps:
-      - attach_gatsby
-      - run:
-          name: Build packages
-          command: yarn install 
-      - run:
-          name: Yarn Gatsby Build 
-          command: yarn run build
-          
-workflows:
-  build-and-test:
-    jobs:
-      - install-dependencies
-      - build-packages:
-          requires:
-            - install-dependencies
-
+    build:
+        docker:
+            - image: circleci/node:12
+        working_directory: ~/gatsby-site
+        steps:
+            - checkout
+            - run:
+                  name: Install Dependencies
+                  command: yarn install 
+            - run:
+                  name: Gatsby Build
+                  command: yarn run pretest
