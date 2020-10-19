@@ -24,6 +24,7 @@
     "lint:js": "eslint . --fix",
     "lint:scss": "stylelint \"src/**/*.scss\" --fix",
     "lint:fix": "eslint --ext js,jsx src --fix",
+    "ts-lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "format-lint": "prettier-eslint --write \"src/**/*.{js,jsx}\"",
     "npm-lock": "npm i --package-lock-only",
     "prettier:diff": "prettier --check \"**/*.{scss,css,js,md}\"",
