@@ -1,3 +1,5 @@
+# circleci
+
 version: 2.1
 
 executors:
@@ -27,7 +29,7 @@ jobs:
             - yarn-packages-v1-
       - run:
           name: Install gatsby dependencies
-          command: yarn install --frozen-lockfile
+          command: npm install --global gatsby-cli yarn install
       - save_cache:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths: ~/.cache/yarn
@@ -45,13 +47,6 @@ jobs:
       - run:
           name: Yarn Gatsby Build 
           command: yarn run build
-   ci-test:
-    executor: default
-    steps:
-      - attach_gatsby
-      - run:
-          name: Analyze
-          command: yarn run pretest
           
 workflows:
   build-and-test:
@@ -60,6 +55,4 @@ workflows:
       - build-packages:
           requires:
             - install-dependencies
-      - ci-test:
-          requires:
-            - install-dependencies
+
