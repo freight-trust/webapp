@@ -24,14 +24,13 @@ import {
 import { Button } from 'carbon-components-react';
 
 export default HomepageTemplate;
-
+/* eslint-disable import/no-extraneous-dependencies */
 <BannerContainer
   title="Connections that just Work"
   content="From Supplier relationship management to Secure invoicing in the cloud"
   buttonLabel="Get Started Today"
     href="https://freight.page.link/request-information"
 >
-
 
 </BannerContainer>
 
@@ -117,15 +116,13 @@ export default HomepageTemplate;
 
   <RequestDemoContent
   title="Drewry Global Freight Index"
-  subTitle="The most reliable ocean container freight pricing combined with our enterprise blockchain EDI Network"
->
+  subTitle="The most reliable ocean container freight pricing combined with our enterprise blockchain EDI Network">
 
 
-  <Button href="https://freight.page.link/request-information" kind="secondary">
-    Request Information
-  </Button>
-  <Button href="https://freight.page.link/request-information" kind="tertiary">
-    Contact Us
-  </Button>
-</RequestDemoContent>
-
+{' '}
+<Button href="https://freight.page.link/request-information" kind="secondary">
+  Request Information
+</Button>
+<Button href="https://freight.page.link/request-information" kind="tertiary">
+  Contact Us
+</Button>
