@@ -1,19 +1,15 @@
-#******************************#
-# GitHub Actions Nodejs
-#******************************#
+# github-actions 
 
-name: Node CI
+name: nodejs
 
 on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: ['12']
 
     steps:
     - uses: actions/checkout@v1
@@ -27,11 +23,8 @@ jobs:
         yarn build:analyze
       env:
         CI: true
-
     - name: build artifact
     - uses: actions/upload-artifact@v2
       with:
         name: build-artifact
         path: public/**
-      env:
-        CI: true
