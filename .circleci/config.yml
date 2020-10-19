@@ -1,55 +1,44 @@
-version: 2.1
-
-executors:
-  default:
-    docker:
-      - image: circleci/node:12
-    working_directory: ~/gatsby-site
-    environment:
-      YARN_CACHE_FOLDER: "~/.cache/yarn"
-
-commands:
-  attach_gatsby:
-    steps:
-      - attach_workspace:
-          at: ~/gatsby-site
-
+# circle-ci
+version: 2
 jobs:
   install-dependencies:
-    executor: default
+    docker:
+    - image: circleci/node:12
+    working_directory: ~/gatsby-site
     steps:
-      - checkout
-      - attach_gatsby
-      - restore_cache:
-          keys:
-            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-v1-{{ .Branch }}-
-            - yarn-packages-v1-
-      - run:
-          name: Install gatsby dependencies
-          command: npm install -g codecov && yarn install --frozen-lockfile
-      - save_cache:
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          paths: ~/.cache/yarn
-      - persist_to_workspace:
-          root: .
-          paths: .
-
+    - checkout
+    - attach_workspace:
+        at: ~/gatsby-site
+    - run:
+        name: Install gatsby dependencies
+        command: yarn add global gatsby-cli  && yarn install
+    - save_cache:
+        key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        paths: ~/.cache/yarn
+    - persist_to_workspace:
+        root: .
+        paths: .
+#    environment:
+#    - YARN_CACHE_FOLDER: ~/.cache/yarn
   build-packages:
-    executor: default
+    docker:
+    - image: circleci/node:12
+    working_directory: ~/gatsby-site
     steps:
-      - attach_gatsby
-      - run:
-          name: Build packages
-          command: yarn add global codecov &&  yarn install 
-      - run:
-          name: Yarn Gatsby Build 
-          command: yarn run build && codecov
-
+    - attach_workspace:
+        at: ~/gatsby-site
+    - run:
+        name: Build packages
+        command: yarn add global codecov &&  yarn install
+    - run:
+        name: Yarn Gatsby Build
+        command: yarn run build && codecov
+#    environment:
+#    - YARN_CACHE_FOLDER: ~/.cache/yarn
 workflows:
   build-and-test:
     jobs:
-      - install-dependencies
-      - build-packages:
-          requires:
-            - install-dependencies
+    - install-dependencies
+    - build-packages:
+        requires:
+        - install-dependencies
