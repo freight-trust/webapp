@@ -25,7 +25,9 @@ export default HomepageTemplate;
 
 <BannerContainer
   title="Trade Finance - from ACH to SWIFT"
-  content="3rd Party Inst. Network Access API"></BannerContainer>
+  content="3rd Party Inst. Network Access API">
+</BannerContainer>
+
 
 # Financial Institution
 
@@ -81,13 +83,8 @@ Minimum acceptable length is 6 characters.
 | ---------------- | ---------------------------------------------------------------------- | -------- | ------- | ------- |
 | BolVerifyRequest | Request object for BoL Verifier [ BolVerifyRequest](#BolVerifyRequest) | X        |         |         |
 
-##### Return Type
+#### Return Type and Content Type
 
-\-
-
-##### Content Type
-
-- **/**
 
 ##### Responses
 
@@ -106,7 +103,8 @@ http response codes
 
 ## Models
 
-### _AppExceptionResponse_ AppExceptionResponse
+### AppExceptionResponse
+> AppExceptionResponse
 
 | Field Name | Required | Type   | Description       | Format |
 | ---------- | -------- | ------ | ----------------- | ------ |
@@ -114,7 +112,8 @@ http response codes
 | message    | X        | String | Exception Message |        |
 | timestamp  | X        | String | timestamp         |        |
 
-### _BolVerifyRequest_ BolVerifyRequest
+### BolVerifyRequest 
+> BolVerifyRequest
 
 | Field Name            | Required | Type   | Description                                               | Format |
 | --------------------- | -------- | ------ | --------------------------------------------------------- | ------ |
