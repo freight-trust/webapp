@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { caption, captionResponsive } from './Caption.module.scss';
+import {caption, captionResponsive} from './Caption.module.scss';
 
 export default class Caption extends React.Component {
   render() {
-    const { children, className, fullWidth } = this.props;
+    const {children, className, fullWidth} = this.props;
 
     const captionClasses = classnames(caption, {
       [className]: className,

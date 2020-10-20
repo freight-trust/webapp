@@ -20,12 +20,12 @@ import React from 'react';
 import Layout from 'gatsby-theme-carbon/src/components/Layout';
 import PageHeader from 'gatsby-theme-carbon/src/components/PageHeader';
 import Main from 'gatsby-theme-carbon/src/components/Main';
-import { mainContent } from './Default.module.scss';
+import {mainContent} from './Default.module.scss';
 
 // eslint-disable-next-line no-unused-vars
-const Default = ({ pageContext, children, location, Title }) => {
-  const { frontmatter = {}, titleType } = pageContext;
-  const { tabs, title, theme, description, keywords } = frontmatter;
+const Default = ({pageContext, children, location, Title}) => {
+  const {frontmatter = {}, titleType} = pageContext;
+  const {tabs, title, theme, description, keywords} = frontmatter;
 
   return (
     <Layout

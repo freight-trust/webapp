@@ -17,9 +17,9 @@
  */
 import React from 'react';
 import styled from '@emotion/styled';
-import { Grid, Column, Row } from 'gatsby-theme-carbon';
+import {Grid, Column, Row} from 'gatsby-theme-carbon';
 
-import { grid, row, firstColumn, secondColumn } from './Callout.module.scss';
+import {grid, row, firstColumn, secondColumn} from './Callout.module.scss';
 
 const StyledGrid = styled(Grid)`
     background-color: ${(props) =>
@@ -34,7 +34,7 @@ const StyledGrid = styled(Grid)`
     max-width: 100%;}
 `;
 
-const HomepageCallout = ({ leftText, rightText, ...rest }) => (
+const HomepageCallout = ({leftText, rightText, ...rest}) => (
   <StyledGrid className={grid} {...rest}>
     <Row className={row}>
       <Column colLg={2} colMd={2} />

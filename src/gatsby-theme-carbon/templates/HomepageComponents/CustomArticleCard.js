@@ -23,7 +23,7 @@ import {
 } from './CustomArticleCard.module.scss';
 
 export const CustomArticleCard = (props) => {
-  const { imgSrc, title, subTitle } = props;
+  const {imgSrc, title, subTitle} = props;
   return (
     <div className={customArticleCardContainer}>
       <div className={articleCardImage}>

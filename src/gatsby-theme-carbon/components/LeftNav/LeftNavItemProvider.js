@@ -15,11 +15,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import { useStaticQuery, graphql } from 'gatsby';
+import {useStaticQuery, graphql} from 'gatsby';
 
 export function themeUseNavItems() {
   const {
-    allNavItemsYaml: { edges },
+    allNavItemsYaml: {edges},
     // eslint-disable-next-line react-hooks/rules-of-hooks
   } = useStaticQuery(graphql`
     query LEFT_NAV_QUERY1 {
@@ -37,7 +37,7 @@ export function themeUseNavItems() {
     }
   `);
 
-  const navItems = edges.map(({ node }) => node);
+  const navItems = edges.map(({node}) => node);
   return navItems;
 }
 

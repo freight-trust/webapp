@@ -6,7 +6,7 @@ const mcRegion = process.env.MAILCHIMP_REGION;
 
 module.exports.handler = (event, context, callback) => {
   const formData = JSON.parse(event.body);
-  const { email } = formData;
+  const {email} = formData;
   let errorMessage = null;
 
   if (!formData) {

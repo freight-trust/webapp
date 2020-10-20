@@ -17,7 +17,7 @@
  */
 /*eslint-disable*/
 import React from 'react';
-import { FourOhFour } from 'gatsby-theme-carbon';
+import {FourOhFour} from 'gatsby-theme-carbon';
 {
   (' ');
 }
@@ -28,12 +28,12 @@ import { FourOhFour } from 'gatsby-theme-carbon';
   (' ');
 }
 const links = [
-  { href: `https://freighttrust.com`, text: `Homepage` },
+  {href: `https://freighttrust.com`, text: `Homepage`},
   {
     href: `https://freight.zendesk.com`,
     text: `Support - support@freight.zendesk.com`,
   },
-  { href: `https://github.com/freight-trust`, text: `GitHub` },
+  {href: `https://github.com/freight-trust`, text: `GitHub`},
 ];
 
 const Custom404 = () => <FourOhFour links={links} />;

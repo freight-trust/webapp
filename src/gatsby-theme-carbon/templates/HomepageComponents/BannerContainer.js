@@ -16,8 +16,8 @@
  *  limitations under the License.
  */
 import React from 'react';
-import { Row, Column } from 'gatsby-theme-carbon';
-import { Button } from 'carbon-components-react';
+import {Row, Column} from 'gatsby-theme-carbon';
+import {Button} from 'carbon-components-react';
 import './BannerContainer.scss';
 
 const BannerText = ({

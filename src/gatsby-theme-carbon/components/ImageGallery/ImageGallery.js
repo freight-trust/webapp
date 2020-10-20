@@ -1,12 +1,12 @@
-import React, { useState, useEffect, Children } from 'react';
+import React, {useState, useEffect, Children} from 'react';
 import ReactDOM from 'react-dom';
-import { breakpoints } from '@carbon/elements';
-import { ChevronRight32, ChevronLeft32, Close32 } from '@carbon/icons-react';
+import {breakpoints} from '@carbon/elements';
+import {ChevronRight32, ChevronLeft32, Close32} from '@carbon/icons-react';
 import cx from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import useMedia from 'use-media';
 import PropTypes from 'prop-types';
-import { Grid, Row, Column } from '../Grid';
+import {Grid, Row, Column} from '../Grid';
 import {
   galleryContainer,
   inDialogGalleryContainer,
@@ -22,7 +22,7 @@ import {
   addNoScroll,
 } from './ImageGallery.module.scss';
 
-function ImageGallery({ children }) {
+function ImageGallery({children}) {
   const [portalsNode, updateNode] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [activeImageIndex, updateActiveImageIndex] = useState(null);
@@ -33,7 +33,7 @@ function ImageGallery({ children }) {
     [navButtons]: activeImageIndex > 0,
   });
   const leftNavButton = cx([leftNav], [navButtons]);
-  const isMobile = useMedia({ maxWidth: breakpoints.md.width });
+  const isMobile = useMedia({maxWidth: breakpoints.md.width});
 
   // Creates the node to go into the portalsNode state.
   useEffect(() => {

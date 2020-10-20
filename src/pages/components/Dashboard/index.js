@@ -20,7 +20,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   DataTable,
   TableContainer,
@@ -215,7 +215,7 @@ class Dashboard extends Component {
                   </TableHead>
                   <TableBody>
                     {rows.map((row) => (
-                      <TableRow {...getRowProps({ row })}>
+                      <TableRow {...getRowProps({row})}>
                         <TableSelectRow
                           {...getSelectionProps({
                             row,

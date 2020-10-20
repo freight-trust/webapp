@@ -16,7 +16,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import {
   AreaChart,
   Area,
@@ -30,8 +30,8 @@ import {
   Bar,
   Line,
 } from 'recharts';
-import { Row, Column } from 'gatsby-theme-carbon';
-import { TextInput } from 'carbon-components-react';
+import {Row, Column} from 'gatsby-theme-carbon';
+import {TextInput} from 'carbon-components-react';
 import {
   charts,
   mainChart,
@@ -85,7 +85,7 @@ class FreightChart extends PureComponent {
               width={795}
               height={300}
               data={this.data}
-              margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+              margin={{top: 10, right: 30, left: 0, bottom: 0}}>
               <defs>
                 <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#27D974" stopOpacity={0.8} />
@@ -94,11 +94,11 @@ class FreightChart extends PureComponent {
               </defs>
 
               <CartesianGrid vertical={false} />
-              <XAxis dataKey="date" tick={{ fill: `#f4f4f4` }} interval={10} />
+              <XAxis dataKey="date" tick={{fill: `#f4f4f4`}} interval={10} />
 
               <Tooltip
-                wrapperStyle={{ background: `#000000` }}
-                contentStyle={{ background: `#525252` }}
+                wrapperStyle={{background: `#000000`}}
+                contentStyle={{background: `#525252`}}
               />
               <Area
                 type="linear"
@@ -177,7 +177,7 @@ class FreightChart extends PureComponent {
                       <CartesianGrid vertical={false} />
                       <XAxis
                         dataKey="date"
-                        tick={{ fill: `#f4f4f4` }}
+                        tick={{fill: `#f4f4f4`}}
                         interval={20}
                       />
                       <Tooltip
@@ -221,10 +221,10 @@ class FreightChart extends PureComponent {
                       <CartesianGrid vertical={false} />
                       <XAxis
                         dataKey="date"
-                        tick={{ fill: `#f4f4f4` }}
+                        tick={{fill: `#f4f4f4`}}
                         interval={20}
                       />
-                      <YAxis dataKey="price" tick={{ fill: `#f4f4f4` }} />
+                      <YAxis dataKey="price" tick={{fill: `#f4f4f4`}} />
                       <Tooltip
                         wrapperStyle={{
                           background: `#000000`,

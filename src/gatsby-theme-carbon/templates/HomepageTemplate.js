@@ -16,7 +16,7 @@
  *  limitations under the License.
  */
 import React from 'react';
-import { HomepageBanner, HomepageCallout } from 'gatsby-theme-carbon';
+import {HomepageBanner, HomepageCallout} from 'gatsby-theme-carbon';
 
 import Layout from 'gatsby-theme-carbon/src/components/Layout';
 import Main from 'gatsby-theme-carbon/src/components/Main';
@@ -24,11 +24,11 @@ import Main from 'gatsby-theme-carbon/src/components/Main';
 import BackToTopBtn from 'gatsby-theme-carbon/src/components/BackToTopBtn';
 import Carbon from '../../images/carbon.jpg';
 
-import { mainContent } from './Homepage.module.scss';
+import {mainContent} from './Homepage.module.scss';
 
-const Homepage = ({ pageContext, children, _frontmatter }) => {
-  const { titleType } = pageContext;
-  const { title, description, keywords } = _frontmatter;
+const Homepage = ({pageContext, children, _frontmatter}) => {
+  const {titleType} = pageContext;
+  const {title, description, keywords} = _frontmatter;
   return (
     <Layout
       pageTitle={title}

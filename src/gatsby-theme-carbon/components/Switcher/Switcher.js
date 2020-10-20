@@ -17,18 +17,18 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import cx from 'classnames';
 import NavContext from 'gatsby-theme-carbon/src/util/context/NavContext';
-import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
+import {nav, open, divider, link, linkDisabled} from './Switcher.module.scss';
 
-const Switcher = ({ children }) => {
-  const { switcherIsOpen } = useContext(NavContext);
+const Switcher = ({children}) => {
+  const {switcherIsOpen} = useContext(NavContext);
 
   return (
     // eslint-disable-next-line jsx-a11y/role-supports-aria-props
     <nav
-      className={cx(nav, { [open]: switcherIsOpen })}
+      className={cx(nav, {[open]: switcherIsOpen})}
       aria-label="Freight Trust & Clearing"
       aria-expanded={switcherIsOpen}
       tabIndex="-1">
@@ -43,15 +43,10 @@ export const SwitcherDivider = (props) => (
   </li>
 );
 
-export const SwitcherLink = ({
-  disabled,
-  children,
-  href: hrefProp,
-  ...rest
-}) => {
+export const SwitcherLink = ({disabled, children, href: hrefProp, ...rest}) => {
   const href = disabled || !hrefProp ? undefined : hrefProp;
   const className = disabled ? linkDisabled : link;
-  const { switcherIsOpen } = useContext(NavContext);
+  const {switcherIsOpen} = useContext(NavContext);
 
   return (
     <li>

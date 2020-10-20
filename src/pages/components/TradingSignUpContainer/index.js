@@ -17,10 +17,10 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { Component } from 'react';
-import { Modal, Button, TextInput, Loading } from 'carbon-components-react';
-import { ChevronLeft20, CheckmarkOutline32 } from '@carbon/icons-react';
-import { BannerContainer } from 'gatsby-theme-carbon/src/templates/HomepageComponents';
+import React, {Component} from 'react';
+import {Modal, Button, TextInput, Loading} from 'carbon-components-react';
+import {ChevronLeft20, CheckmarkOutline32} from '@carbon/icons-react';
+import {BannerContainer} from 'gatsby-theme-carbon/src/templates/HomepageComponents';
 import './styles.scss';
 
 const modalProps = [
@@ -83,8 +83,8 @@ const modalProps = [
     headerLabel: `Success`,
     buttonText: `Redirect`,
     renderContent: () => (
-      <div style={{ textAlign: `center` }}>
-        <CheckmarkOutline32 style={{ width: 60, height: 60 }} />
+      <div style={{textAlign: `center`}}>
+        <CheckmarkOutline32 style={{width: 60, height: 60}} />
         <h4>Corporate Authentication Confirmed</h4>
       </div>
     ),
@@ -109,10 +109,10 @@ class TradingSignUpContainer extends Component {
   };
 
   goToNextContentStep = () => {
-    const { currentContentStep, currentStep } = this.state;
+    const {currentContentStep, currentStep} = this.state;
 
     if (currentContentStep === 2) {
-      this.setState({ currentStep: currentStep + 1 });
+      this.setState({currentStep: currentStep + 1});
       return;
     }
 
@@ -121,14 +121,14 @@ class TradingSignUpContainer extends Component {
       _this.goToNextContentStep();
     }, 2000);
 
-    this.setState({ currentContentStep: currentContentStep + 1 });
+    this.setState({currentContentStep: currentContentStep + 1});
   };
 
   goToNextStep = () => {
-    const { currentStep } = this.state;
+    const {currentStep} = this.state;
 
     if (currentStep === 3) {
-      this.setState({ modalVisible: false });
+      this.setState({modalVisible: false});
       return;
     }
 
@@ -138,21 +138,21 @@ class TradingSignUpContainer extends Component {
         _this.goToNextContentStep();
       }, 2000);
     }
-    this.setState({ currentStep: currentStep + 1 });
+    this.setState({currentStep: currentStep + 1});
   };
 
   goToPrevStep = () => {
-    const { currentStep } = this.state;
+    const {currentStep} = this.state;
     if (currentStep === 5) {
-      this.setState({ currentStep: 3 });
+      this.setState({currentStep: 3});
       return;
     }
 
-    if (currentStep > 0) this.setState({ currentStep: currentStep - 1 });
+    if (currentStep > 0) this.setState({currentStep: currentStep - 1});
   };
 
   render() {
-    const { modalVisible, currentStep, currentContentStep } = this.state;
+    const {modalVisible, currentStep, currentContentStep} = this.state;
 
     const {
       modalLabel,

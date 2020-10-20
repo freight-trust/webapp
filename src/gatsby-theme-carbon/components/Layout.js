@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import React, { useLayoutEffect } from 'react';
+import React, {useLayoutEffect} from 'react';
 
 import LeftNav from 'gatsby-theme-carbon/src/components/LeftNav';
 import Meta from 'gatsby-theme-carbon/src/components/Meta';

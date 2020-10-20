@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import _throttle from 'lodash.throttle';
 
 let passiveListenerSupported;
@@ -40,7 +40,7 @@ const useScrollPosition = () => {
     window.addEventListener(
       'scroll',
       handleScroll,
-      passiveListenerSupported ? { passive: true } : false
+      passiveListenerSupported ? {passive: true} : false
     );
 
     return () => {

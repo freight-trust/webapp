@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Checkbox } from 'carbon-components-react';
+import React, {Component} from 'react';
+import {Checkbox} from 'carbon-components-react';
 import {
   ediTable,
   ediNameCell,
@@ -26,14 +26,14 @@ class EDITable extends Component {
     this.setState({
       uncheckedCols: [...Object.keys(this.props.headersData)],
       checkedCols: [],
-      headerClassData: { ...this.props.headerClassData },
+      headerClassData: {...this.props.headerClassData},
     });
   }
 
   onCheckBoxClicked = (value, id) => {
     console.log('checkbox clicked', id, value);
-    let { checkedCols, uncheckedCols, headerClassData } = this.state;
-    const { headersData } = this.props;
+    let {checkedCols, uncheckedCols, headerClassData} = this.state;
+    const {headersData} = this.props;
 
     if (value) {
       const index = uncheckedCols.indexOf(id);
@@ -55,12 +55,12 @@ class EDITable extends Component {
       headerClassData[headersData[id].class].colCount++;
     }
 
-    this.setState({ checkedCols, uncheckedCols });
+    this.setState({checkedCols, uncheckedCols});
   };
 
   render() {
-    const { checkedCols, uncheckedCols, headerClassData } = this.state;
-    const { headersData, rows } = this.props;
+    const {checkedCols, uncheckedCols, headerClassData} = this.state;
+    const {headersData, rows} = this.props;
 
     return (
       <div title="EDIFact Table" className={ediTableContainer}>

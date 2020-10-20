@@ -16,15 +16,15 @@
  *  limitations under the License.
  */
 import React from 'react';
-import { Row, Column } from 'gatsby-theme-carbon';
-import { Button } from 'carbon-components-react';
+import {Row, Column} from 'gatsby-theme-carbon';
+import {Button} from 'carbon-components-react';
 import {
   textContainer,
   textImageContainer,
   imageContainer,
 } from './TextImage.module.scss';
 
-const TextContainer = ({ title, content, buttonLabel }) => (
+const TextContainer = ({title, content, buttonLabel}) => (
   <div className={textContainer}>
     <h1>{title}</h1>
     <p>{content}</p>

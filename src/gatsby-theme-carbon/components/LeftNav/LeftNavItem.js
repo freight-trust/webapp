@@ -15,9 +15,9 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { useContext } from 'react';
-import { Link } from 'gatsby';
-import { Location } from '@reach/router';
+import React, {useContext} from 'react';
+import {Link} from 'gatsby';
+import {Location} from '@reach/router';
 import cx from 'classnames';
 import {
   SideNavLink,
@@ -31,8 +31,8 @@ import NavContext from 'gatsby-theme-carbon/src/util/context/NavContext';
 import usePathprefix from 'gatsby-theme-carbon/src/util/hooks/usePathprefix';
 
 const LeftNavItem = (props) => {
-  const { items, category, hasDivider, isSpace } = props;
-  const { toggleNavState } = useContext(NavContext);
+  const {items, category, hasDivider, isSpace} = props;
+  const {toggleNavState} = useContext(NavContext);
   const closeLeftNav = () => {
     toggleNavState(`leftNavIsOpen`, `close`);
   };
@@ -40,7 +40,7 @@ const LeftNavItem = (props) => {
 
   return (
     <Location>
-      {({ location }) => {
+      {({location}) => {
         if (isSpace) {
           return <hr className={styles.divider} />;
         }
@@ -91,7 +91,7 @@ const LeftNavItem = (props) => {
   );
 };
 
-const SubNavItems = ({ items, pathname, onClick }) =>
+const SubNavItems = ({items, pathname, onClick}) =>
   items.map((item, i) => {
     const hasActiveTab =
       `${item.path.split(`/`)[1]}/${item.path.split(`/`)[2]}` ===

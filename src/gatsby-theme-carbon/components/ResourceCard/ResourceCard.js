@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Link, withPrefix } from 'gatsby';
+import {Link, withPrefix} from 'gatsby';
 import {
   ArrowRight20,
   Calendar20,
@@ -10,9 +10,9 @@ import {
   Error20,
   Launch20,
 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+import {settings} from 'carbon-components';
 
-const { prefix } = settings;
+const {prefix} = settings;
 
 export default class ResourceCard extends React.Component {
   render() {

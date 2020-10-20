@@ -18,11 +18,11 @@
 import React from 'react';
 import Layout from 'gatsby-theme-carbon/src/components/Layout';
 import Main from 'gatsby-theme-carbon/src/components/Main';
-import { mainContent } from '../Default.module.scss';
+import {mainContent} from '../Default.module.scss';
 
-const DashboardTemplate = ({ pageContext, children, customNavItems }) => {
-  const { frontmatter = {}, titleType } = pageContext;
-  const { tabs, title, theme, description, keywords } = frontmatter;
+const DashboardTemplate = ({pageContext, children, customNavItems}) => {
+  const {frontmatter = {}, titleType} = pageContext;
+  const {tabs, title, theme, description, keywords} = frontmatter;
 
   return (
     <Layout

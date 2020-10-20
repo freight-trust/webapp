@@ -1,8 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
-import { list } from './Markdown.module.scss';
+import {list} from './Markdown.module.scss';
 
-const Ul = ({ children, nested, ...rest }) => {
+const Ul = ({children, nested, ...rest}) => {
   const className = cx('bx--list--unordered', list, {
     'bx--list--nested': nested,
   });

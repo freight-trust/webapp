@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 import {
   ArrowRight20,
   Calendar20,
@@ -7,13 +7,13 @@ import {
   Email20,
   Launch20,
 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+import {settings} from 'carbon-components';
 import styles from './MiniCard.module.scss';
-import { Column } from '../Grid';
+import {Column} from '../Grid';
 
-const { prefix } = settings;
+const {prefix} = settings;
 
-const getIcon = ({ actionIcon }) => {
+const getIcon = ({actionIcon}) => {
   switch (actionIcon) {
     case 'arrowRight':
       return <ArrowRight20 aria-label="Open resource" />;
@@ -28,13 +28,13 @@ const getIcon = ({ actionIcon }) => {
   }
 };
 
-const MiniCard = ({ children, href, title, actionIcon, ...rest }) => {
+const MiniCard = ({children, href, title, actionIcon, ...rest}) => {
   const cardContent = (
     <div className={styles.card}>
       <div className={styles.wrapper}>
         <div className={styles.title}>{title}</div>
         {children === undefined ? (
-          <div className={styles.icon}>{getIcon({ actionIcon })}</div>
+          <div className={styles.icon}>{getIcon({actionIcon})}</div>
         ) : (
           <div className={styles.image}>{children}</div>
         )}

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { settings } from 'carbon-components';
-import { column } from './Grid.module.scss';
+import {settings} from 'carbon-components';
+import {column} from './Grid.module.scss';
 
-const { prefix } = settings;
+const {prefix} = settings;
 
-export const Grid = ({ children, className }) => (
+export const Grid = ({children, className}) => (
   <div className={classnames([`${prefix}--grid`], className)}>{children}</div>
 );
 
@@ -19,7 +19,7 @@ Grid.propTypes = {
   className: PropTypes.string,
 };
 
-export const Row = ({ children, className }) => (
+export const Row = ({children, className}) => (
   <div className={classnames([`${prefix}--row`], className)}>{children}</div>
 );
 

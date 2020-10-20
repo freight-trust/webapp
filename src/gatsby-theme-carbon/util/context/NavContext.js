@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, {useReducer, useState} from 'react';
 
 const NavContext = React.createContext({
   leftNavIsOpen: false,
@@ -11,16 +11,16 @@ const NavContext = React.createContext({
 const reducer = (state, action) => {
   switch (action.type) {
     case 'open':
-      return { ...state, [action.nav]: true };
+      return {...state, [action.nav]: true};
     case 'close':
-      return { ...state, [action.nav]: false };
+      return {...state, [action.nav]: false};
     default:
-      return { ...state, [action.nav]: !state[action.nav] };
+      return {...state, [action.nav]: !state[action.nav]};
   }
 };
-export const NavContextProvider = ({ children }) => {
+export const NavContextProvider = ({children}) => {
   const [
-    { leftNavIsOpen, searchIsOpen, switcherIsOpen, leftNavScrollOffset },
+    {leftNavIsOpen, searchIsOpen, switcherIsOpen, leftNavScrollOffset},
     dispatch,
   ] = useReducer(reducer, {
     leftNavIsOpen: false,
@@ -31,7 +31,7 @@ export const NavContextProvider = ({ children }) => {
   const [leftNavScrollTop, setLeftNavScrollTop] = useState(0);
 
   const toggleNavState = (nav, type) => {
-    dispatch({ nav, type });
+    dispatch({nav, type});
   };
 
   const [isManagingFocus, setIsManagingFocus] = useState(false);

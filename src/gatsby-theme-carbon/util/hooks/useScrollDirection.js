@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import {useEffect, useRef, useState} from 'react';
 import useScrollPosition from './useScrollPosition';
 import useWindowSize from './useWindowSize';
 
 const useScrollDirection = () => {
-  const { y } = useScrollPosition();
+  const {y} = useScrollPosition();
   const lastPosition = useRef(y);
   const [direction, setDirection] = useState(null);
   const windowSize = useWindowSize();

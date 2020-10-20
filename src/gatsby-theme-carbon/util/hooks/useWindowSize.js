@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import _throttle from 'lodash.throttle';
 
 const getWindowSize = () => {

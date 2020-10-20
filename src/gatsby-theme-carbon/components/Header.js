@@ -16,8 +16,8 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { useContext } from 'react';
-import { Link } from 'gatsby';
+import React, {useContext} from 'react';
+import {Link} from 'gatsby';
 import {
   Header as ShellHeader,
   HeaderMenuButton,
@@ -25,7 +25,7 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
 } from 'carbon-components-react';
-import { AppSwitcher20, Close20 } from '@carbon/icons-react';
+import {AppSwitcher20, Close20} from '@carbon/icons-react';
 import cx from 'classnames';
 
 import HeaderNav from 'gatsby-theme-carbon/src/components/HeaderNav/HeaderNav';
@@ -48,11 +48,11 @@ import {
   globalBar,
 } from './Header.module.scss';
 // href="https://freight.page.link/request-information"
-const Header = ({ children }) => {
-  const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
+const Header = ({children}) => {
+  const {leftNavIsOpen, toggleNavState, switcherIsOpen} = useContext(
     NavContext
   );
-  const { navigationStyle } = useMetadata();
+  const {navigationStyle} = useMetadata();
 
   return (
     <ShellHeader

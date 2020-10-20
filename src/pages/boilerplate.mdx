@@ -30,9 +30,9 @@ handler. To do that, we'll need to shadow the `FeedbackDialog` component.
 import React from 'react';
 import ThemeFeedbackDialog from 'gatsby-theme-carbon/src/components/FeedbackDialog/FeedbackDialog';
 
-const FeedbackDialog = ({ props }) => {
+const FeedbackDialog = ({props}) => {
   const onSubmit = (data) => {
-    console.log({ ...data });
+    console.log({...data});
   };
 
   return <ThemeFeedbackDialog {...props} onSubmit={onSubmit} />;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { blockquote } from './Markdown.module.scss';
+import {blockquote} from './Markdown.module.scss';
 
 const Blockquote = (props) => <blockquote className={blockquote} {...props} />;
 

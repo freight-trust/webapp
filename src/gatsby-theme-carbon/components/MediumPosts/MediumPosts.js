@@ -1,14 +1,14 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import {useStaticQuery, graphql} from 'gatsby';
 import PropTypes from 'prop-types';
-import { Column, Row } from '../Grid';
+import {Column, Row} from '../Grid';
 import ArticleCard from '../ArticleCard';
-import { image, cardContainer } from './MediumPosts.module.scss';
+import {image, cardContainer} from './MediumPosts.module.scss';
 
-const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
+const MediumPosts = ({postLimit = 3, cardProps, ...rest}) => {
   const data = useStaticQuery(graphql`
     query {
-      allMediumFeed(sort: { fields: date, order: DESC }, limit: 10) {
+      allMediumFeed(sort: {fields: date, order: DESC}, limit: 10) {
         edges {
           node {
             author
@@ -23,7 +23,7 @@ const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
     }
   `);
 
-  const allPosts = data.allMediumFeed.edges.map(({ node }) => node);
+  const allPosts = data.allMediumFeed.edges.map(({node}) => node);
 
   return (
     <Row {...rest}>

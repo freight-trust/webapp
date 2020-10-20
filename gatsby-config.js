@@ -96,10 +96,10 @@ module.exports = {
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {
-            policy: [{ userAgent: `*`, disallow: [`/`] }],
+            policy: [{userAgent: `*`, disallow: [`/`]}],
           },
           production: {
-            policy: [{ userAgent: `*`, allow: `/` }],
+            policy: [{userAgent: `*`, allow: `/`}],
           },
         },
       },
@@ -118,7 +118,7 @@ module.exports = {
         // should be an object or a function that is executed in the browser
         //
         // Defaults to null
-        defaultDataLayer: { platform: `gatsby` },
+        defaultDataLayer: {platform: `gatsby`},
 
         // Specify optional GTM environment details.
         // TODO: Fix Optional Settings
@@ -195,7 +195,7 @@ module.exports = {
           whitelabel: false,
           lang: `en`,
           siteId: 1967509,
-          preferenceCookie: { expireAfter: 365 },
+          preferenceCookie: {expireAfter: 365},
           enableCcpa: true,
           cookiePolicyId: 55466554,
           banner: {

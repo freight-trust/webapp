@@ -2,12 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Link } from 'gatsby';
-import { settings } from 'carbon-components';
-import { Row, Column } from '../Grid';
+import {Link} from 'gatsby';
+import {settings} from 'carbon-components';
+import {Row, Column} from '../Grid';
 import ResourceCard from '../ResourceCard';
 
-const { prefix } = settings;
+const {prefix} = settings;
 
 export default class FeatureCard extends React.Component {
   render() {

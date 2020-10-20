@@ -2,7 +2,7 @@
 /* eslint-disable react/display-name */
 import React from 'react';
 
-import { P, H1, H2, H3, H4, H5, Ul, Ol, Li, Blockquote } from '../markdown';
+import {P, H1, H2, H3, H4, H5, Ul, Ol, Li, Blockquote} from '../markdown';
 import PageTable from '../PageTable';
 import Code from '../Code';
 import PageDescription from '../PageDescription';
@@ -15,19 +15,19 @@ import ImageCard from '../ImageCard';
 import ImageGallery from '../ImageGallery';
 import ImageGalleryImage from '../ImageGallery/ImageGalleryImage';
 import InlineNotification from '../InlineNotification';
-import { Row, Column, Grid } from '../Grid';
-import { AnchorLink, AnchorLinks } from '../AnchorLinks';
-import { Tab, Tabs } from '../Tabs';
+import {Row, Column, Grid} from '../Grid';
+import {AnchorLink, AnchorLinks} from '../AnchorLinks';
+import {Tab, Tabs} from '../Tabs';
 import Link from '../Link';
-import { Accordion, AccordionItem } from '../Accordion';
+import {Accordion, AccordionItem} from '../Accordion';
 import MediumPosts from '../MediumPosts';
 import Title from '../Title';
-import { MiniCard, CardGroup } from '../MiniCard';
+import {MiniCard, CardGroup} from '../MiniCard';
 import Sup from '../markdown/Sup';
 import Abbr from '../markdown/Abbr';
 
 const components = {
-  wrapper: function Wrapper({ children, ...props }) {
+  wrapper: function Wrapper({children, ...props}) {
     return <div {...props}>{children}</div>;
   },
   h1: H1,

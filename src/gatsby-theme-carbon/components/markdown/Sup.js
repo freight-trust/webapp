@@ -1,7 +1,7 @@
 import React from 'react';
-import { sup } from './Markdown.module.scss';
+import {sup} from './Markdown.module.scss';
 
-const Sup = ({ children, ...rest }) => (
+const Sup = ({children, ...rest}) => (
   <sup className={sup} {...rest}>
     {children}
   </sup>

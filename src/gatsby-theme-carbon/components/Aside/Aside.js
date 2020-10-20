@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { aside } from './Aside.module.scss';
+import {aside} from './Aside.module.scss';
 
 export default class Aside extends React.Component {
   render() {
-    const { children, className, ...rest } = this.props;
+    const {children, className, ...rest} = this.props;
 
     const captionClasses = classnames(aside, {
       [className]: className,

@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 export default class PageTable extends React.Component {
   render() {
-    const { children } = this.props;
+    const {children} = this.props;
     let gridSize;
     if (Array.isArray(children[1].props.children)) {
       gridSize = children[1].props.children[0].props.children.length;

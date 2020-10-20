@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { InlineNotification as CarbonInlineNotification } from 'carbon-components-react';
-import { Row, Column } from '../Grid';
+import {InlineNotification as CarbonInlineNotification} from 'carbon-components-react';
+import {Row, Column} from '../Grid';
 
-import { notification } from './InlineNotification.module.scss';
+import {notification} from './InlineNotification.module.scss';
 
 export default class InlineNotification extends React.Component {
   render() {
-    const { children, className, kind } = this.props;
+    const {children, className, kind} = this.props;
 
     const notificationClasses = classnames(notification, {
       [className]: className,

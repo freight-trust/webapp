@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 
 let passiveListenerSupported;
 
@@ -27,12 +27,12 @@ function useOnClickOutside(ref, handler) {
     document.addEventListener(
       'mousedown',
       listener,
-      passiveListenerSupported ? { passive: true } : false
+      passiveListenerSupported ? {passive: true} : false
     );
     document.addEventListener(
       'touchstart',
       listener,
-      passiveListenerSupported ? { passive: true } : false
+      passiveListenerSupported ? {passive: true} : false
     );
 
     return () => {

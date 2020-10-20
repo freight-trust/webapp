@@ -18,10 +18,10 @@
 
 import './src/styles/index.scss';
 import React from 'react';
-import { navigate } from 'gatsby';
-import { AuthProvider } from 'react-use-auth';
+import {navigate} from 'gatsby';
+import {AuthProvider} from 'react-use-auth';
 
-export const wrapRootElement = ({ element }) => (
+export const wrapRootElement = ({element}) => (
   <AuthProvider
     navigate={navigate}
     AUTH0_DOMAIN="https://freight-trust.auth0.com"

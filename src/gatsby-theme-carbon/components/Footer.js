@@ -16,9 +16,9 @@
  *  limitations under the License.
  */
 import React from 'react';
-import { Button } from 'carbon-components-react';
-import { Row, Column } from 'gatsby-theme-carbon';
-import { useAuth } from 'react-use-auth';
+import {Button} from 'carbon-components-react';
+import {Row, Column} from 'gatsby-theme-carbon';
+import {useAuth} from 'react-use-auth';
 import cx from 'classnames';
 import {
   footerContent,
@@ -73,10 +73,10 @@ const ResourcesFooter = (
   </div>
 );
 
-const CustomFooter = ({ homepage }) => {
-  const { isAuthenticated, login, logout } = useAuth();
+const CustomFooter = ({homepage}) => {
+  const {isAuthenticated, login, logout} = useAuth();
   return (
-    <div className={cx(footerContent, { [footerContentDefault]: !homepage })}>
+    <div className={cx(footerContent, {[footerContentDefault]: !homepage})}>
       <Row className={footerRow}>
         <Column
           colSm={12}
