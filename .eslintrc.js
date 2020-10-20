@@ -19,5 +19,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     'react/jsx-no-useless-fragment': 1,
     'no-useless-escape': 0,
+    'react/jsx-no-undef': 0,
   },
 };
