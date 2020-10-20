@@ -20,5 +20,6 @@ module.exports = {
     'react/jsx-no-useless-fragment': 1,
     'no-useless-escape': 0,
     'react/jsx-no-undef': 0,
+    'import/no-unresolved': 0,
   },
 };
