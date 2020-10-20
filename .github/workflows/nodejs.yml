@@ -1,4 +1,4 @@
-# github-actions 
+# github-actions
 
 name: nodejs
 
@@ -12,19 +12,19 @@ jobs:
         node-version: ['12']
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: build:analyze
-      run: |
-        yarn install
-        yarn build:analyze
-      env:
-        CI: true
-    - name: build artifact
-    - uses: actions/upload-artifact@v2
-      with:
-        name: build-artifact
-        path: public/**
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: build:analyze
+        run: |
+          yarn install
+          yarn build:analyze
+        env:
+          CI: true
+      - name: build artifact
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: public/**
