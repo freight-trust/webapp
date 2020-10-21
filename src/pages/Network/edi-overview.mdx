@@ -27,9 +27,7 @@ export default HomepageTemplate;
   title="EDI X12/EDIFACT and more"
   content="Enable accurate and actionable data with existing your EDI"
   buttonLabel="Get Started Today"
-  href="https://freight.page.link/request-information">
-</BannerContainer>
-
+  href="https://freight.page.link/request-information"></BannerContainer>
 
 <ArticleContainer
   title="Code Elements"
@@ -38,6 +36,7 @@ export default HomepageTemplate;
 N101 is assigned a non-built-in XSD data type consisting of the literal "DE\_"
 and the data element number. The resulting DE_98 is used to define the available
 internal code values and their descriptions.
+
 
 The following example is for the code lists.
 
@@ -62,6 +61,7 @@ Loan Applicant
 </xs:annotation>
 </xs:enumeration>
 ```
+
 </Row>
 </ArticleContainer>
 
@@ -74,6 +74,7 @@ In the example above, DE_98 is assigned a non-built-in XSD data type of ID. Note
 that there isn't a minimum or maximum length. The enumerations themselves
 specify length. The following illustrates the method of defining X12 data types
 in XSD using a built-in XSD type.
+
 
 ```xml
 <xs:simpleType name="AN">
@@ -93,6 +94,7 @@ An identifier data element always contains a unique value from a single, predefi
 <xs:restriction base="xs:string"/>
 </xs:simpleType>
 ```
+
 </Row>
 </ArticleContainer>
 
@@ -101,6 +103,7 @@ An identifier data element always contains a unique value from a single, predefi
   title="X12 Namespaces"
   subTitle="ASC X12">
 <Row>
+
 
 Many, but not all, of the properties specified in X12.6 map accurately to XML
 without change. For example, X12 data element types, such as date, do not
@@ -136,7 +139,6 @@ As illustrated above, this special consideration is used for dates, but also for
 times for similar reasons. Additionally it is used for numeric and decimal types
 to accommodate implied decimal positions and an optional sign.
 
-
 </Row>
 </ArticleContainer>
 
@@ -145,6 +147,7 @@ to accommodate implied decimal positions and an optional sign.
   title="X12 Segment Elements"
   subTitle="ASC X12">
 <Row>
+
 
 In the example above, the N1 segment is the first segment in Loop_1-0700.
 
@@ -167,5 +170,7 @@ Party Identification
 Code identifying an organizational entity, a physical location, property or an individual
 </xs:documentation>
 ```
+
 </Row>
 </ArticleContainer>
+

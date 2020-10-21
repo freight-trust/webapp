@@ -1,5 +1,5 @@
 const perfume = new Perfume({
-  analyticsTracker: options => {
+  analyticsTracker: (options) => {
     const {
       metricName,
       data,

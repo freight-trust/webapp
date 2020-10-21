@@ -37,9 +37,9 @@ module.exports = {
         display: `browser`,
       },
     },
-  {
-    resolve: "gatsby-plugin-perfume.js",
-  },
+    {
+      resolve: 'gatsby-plugin-perfume.js',
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
