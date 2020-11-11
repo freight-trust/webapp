@@ -3,7 +3,7 @@
 
 name: Node CI
 
-on: [push, pull_request]
+on: [pull_request]
 
 # Job Builds 
 jobs:
@@ -13,7 +13,7 @@ jobs:
 # Job Strategies 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x]
         
 # Job Steps
     steps:
@@ -39,7 +39,7 @@ jobs:
       run: |
         yarn --frozen-lockfile
         yarn install
-        yarn run ci:check
+        yarn run ci-check
       env:
         CI: true
 
