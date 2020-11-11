@@ -1,37 +1,45 @@
-#******************************#
-# GitHub Actions Nodejs
-#******************************#
+# GitHub Actions CI
+# version 2020-11-10
 
 name: Node CI
 
 on: [push, pull_request]
 
+# Job Builds 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
+# Job Strategies 
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
-
+        
+# Job Steps
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
+    - uses: actions/checkout@v2
+    - name: Use Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: build:analyze
+        node-version: '12.x'
+    - name: Cache Node.js modules
+      uses: actions/cache@v2
+      with:
+        # Yarn Cache - use: $ bash -c "yarn --version && yarn cache dir"
+        # ~/.yarn-cache/v6
+        # explicitly configure yarn cache via `yarn config set cache-folder ~/.yarn-cache/v6`
+        path: ~/.yarn-cache/v6
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+          ${{ runner.OS }}-
+    - name: Configure Cache 
+      run: yarn config set cache-folder ~/.yarn-cache/v6
+    - name: Yarn Run & Analyze
       run: |
+        yarn --frozen-lockfile
         yarn install
-        yarn build:analyze
+        yarn run ci:check
       env:
         CI: true
 
-    - name: build artifact
-    - uses: actions/upload-artifact@v2
-      with:
-        name: build-artifact
-        path: public/**
-      env:
-        CI: true
