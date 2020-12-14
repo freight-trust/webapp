@@ -1,3 +1,3 @@
-import PageTable from "./PageTable";
+import PageTable from './PageTable';
 
 export default PageTable;

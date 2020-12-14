@@ -1,3 +1,3 @@
-import InlineNotification from "./InlineNotification";
+import InlineNotification from './InlineNotification';
 
 export default InlineNotification;

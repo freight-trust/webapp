@@ -1,27 +1,27 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 import {
   ArrowRight20,
   Calendar20,
   Download20,
   Email20,
   Launch20,
-} from "@carbon/icons-react";
-import { settings } from "carbon-components";
-import styles from "./MiniCard.module.scss";
-import { Column } from "../Grid";
+} from '@carbon/icons-react';
+import { settings } from 'carbon-components';
+import styles from './MiniCard.module.scss';
+import { Column } from '../Grid';
 
 const { prefix } = settings;
 
 const getIcon = ({ actionIcon }) => {
   switch (actionIcon) {
-    case "arrowRight":
+    case 'arrowRight':
       return <ArrowRight20 aria-label="Open resource" />;
-    case "download":
+    case 'download':
       return <Download20 aria-label="Download" />;
-    case "email":
+    case 'email':
       return <Email20 aria-label="Email" />;
-    case "calendar":
+    case 'calendar':
       return <Calendar20 aria-label="Calendar" />;
     default:
       return <Launch20 aria-label="Open resource" />;
@@ -44,7 +44,7 @@ const MiniCard = ({ children, href, title, actionIcon, ...rest }) => {
 
   let isLink;
   if (href !== undefined) {
-    isLink = href.charAt(0) === "/";
+    isLink = href.charAt(0) === '/';
   }
 
   const cardContainer = isLink ? (

@@ -16,7 +16,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react';
 import {
   AreaChart,
   Area,
@@ -29,9 +29,9 @@ import {
   LineChart,
   Bar,
   Line,
-} from "recharts";
-import { Row, Column } from "gatsby-theme-carbon";
-import { TextInput } from "carbon-components-react";
+} from 'recharts';
+import { Row, Column } from 'gatsby-theme-carbon';
+import { TextInput } from 'carbon-components-react';
 import {
   charts,
   mainChart,
@@ -43,7 +43,7 @@ import {
   chartControl,
   dateControl,
   rangeControl,
-} from "./FreightChart.module.scss";
+} from './FreightChart.module.scss';
 
 class FreightChart extends PureComponent {
   render() {

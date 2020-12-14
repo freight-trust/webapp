@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import { ChevronDown16, ChevronUp16 } from "@carbon/icons-react";
+import React, { useState } from 'react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
 
-import cx from "classnames";
+import cx from 'classnames';
 
-import { Row } from "../Grid";
-import prismTheme from "./prismTheme";
+import { Row } from '../Grid';
+import prismTheme from './prismTheme';
 
-import styles from "./Code.module.scss";
+import styles from './Code.module.scss';
 
-import PathRow from "./PathRow";
-import Sidebar from "./Sidebar";
+import PathRow from './PathRow';
+import Sidebar from './Sidebar';
 
-const Code = ({ children, className: classNameProp = "", path, src }) => {
+const Code = ({ children, className: classNameProp = '', path, src }) => {
   const [hasMoreThanNineLines, setHasMoreThanNineLines] = useState(false);
   const [shouldShowMore, setShouldShowMore] = useState(false);
 
-  const language = classNameProp.replace(/language-/, "").replace("mdx", "jsx");
+  const language = classNameProp.replace(/language-/, '').replace('mdx', 'jsx');
 
   const removeTrailingEmptyLine = (lines) => {
     const [lastLine] = lines.splice(-1);

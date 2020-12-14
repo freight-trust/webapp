@@ -1,3 +1,3 @@
-import MDXProvider from "./MDXProvider";
+import MDXProvider from './MDXProvider';
 
 export default MDXProvider;

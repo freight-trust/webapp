@@ -1,3 +1,3 @@
-import MediumPosts from "./MediumPosts";
+import MediumPosts from './MediumPosts';
 
 export default MediumPosts;

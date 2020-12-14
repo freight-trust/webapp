@@ -15,11 +15,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React from "react";
-import { Button } from "carbon-components-react";
-import { Row, Column } from "gatsby-theme-carbon";
-import { useAuth } from "react-use-auth";
-import cx from "classnames";
+import React from 'react';
+import { Button } from 'carbon-components-react';
+import { Row, Column } from 'gatsby-theme-carbon';
+import { useAuth } from 'react-use-auth';
+import cx from 'classnames';
 import {
   footerContent,
   footerContentDefault,
@@ -32,7 +32,7 @@ import {
   footerFollowSection,
   footerLinkColMobile,
   hideOnMobile,
-} from "./Footer.module.scss";
+} from './Footer.module.scss';
 
 const ProductFooter = (
   <div>
@@ -162,13 +162,19 @@ const CustomFooter = ({ homepage }) => {
         <Column colMd={6} colLg={6}>
           <div className={footerFollowSection}>
             <span>
-              <a href="https://github.com/freight-trust/legal/blob/master/src/terms-of-service.md">Terms of Service{` `}</a>
+              <a href="https://github.com/freight-trust/legal/blob/master/src/terms-of-service.md">
+                Terms of Service{` `}
+              </a>
             </span>
             <span>
-              <a href="https://github.com/freight-trust/legal/blob/master/src/privacy-policy.md">Privacy Policy{` `}</a>
+              <a href="https://github.com/freight-trust/legal/blob/master/src/privacy-policy.md">
+                Privacy Policy{` `}
+              </a>
             </span>
             <span>
-              <a href="https://github.com/freight-trust/legal/blob/master/src/disclaimer.md">Disclaimer{` `}</a>
+              <a href="https://github.com/freight-trust/legal/blob/master/src/disclaimer.md">
+                Disclaimer{` `}
+              </a>
             </span>
           </div>
         </Column>

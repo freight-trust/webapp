@@ -1,9 +1,9 @@
-import React from "react";
-import { CopyButton } from "carbon-components-react";
-import { Launch16 } from "@carbon/icons-react";
-import copy from "copy-to-clipboard";
-import cx from "classnames";
-import { button, sidebar, copyButton } from "./Code.module.scss";
+import React from 'react';
+import { CopyButton } from 'carbon-components-react';
+import { Launch16 } from '@carbon/icons-react';
+import copy from 'copy-to-clipboard';
+import cx from 'classnames';
+import { button, sidebar, copyButton } from './Code.module.scss';
 
 // If there is a src url, but no path name, both icons appear in the sidebar.
 // If there is a path name, but no src url, the copy button should be in the PathRow

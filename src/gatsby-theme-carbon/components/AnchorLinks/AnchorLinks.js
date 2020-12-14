@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { list, listSmall, multipleColumns } from "./AnchorLinks.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { list, listSmall, multipleColumns } from './AnchorLinks.module.scss';
 
 export default class AnchorLinks extends React.Component {
   render() {

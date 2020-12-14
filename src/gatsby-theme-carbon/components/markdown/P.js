@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { Row } from "../Grid";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { Row } from '../Grid';
 
-import { paragraph, paragraphResponsive } from "./Markdown.module.scss";
+import { paragraph, paragraphResponsive } from './Markdown.module.scss';
 
 export default class P extends React.Component {
   render() {

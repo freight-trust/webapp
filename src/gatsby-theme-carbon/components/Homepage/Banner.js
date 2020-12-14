@@ -15,10 +15,10 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React from "react";
-import { Row, Column } from "gatsby-theme-carbon";
+import React from 'react';
+import { Row, Column } from 'gatsby-theme-carbon';
 
-import { column, row, grid } from "./Banner.module.scss";
+import { column, row, grid } from './Banner.module.scss';
 
 const HomepageBanner = ({ image, position, renderText }) => (
   <div className={grid} position={position}>

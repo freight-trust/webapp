@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
-import { Column } from "../Grid";
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { Column } from '../Grid';
 import {
   imageButtonWrapper,
   imageTitle,
   imageInDialog,
   figure,
   column,
-} from "./ImageGallery.module.scss";
+} from './ImageGallery.module.scss';
 
 function ImageGalleryImage({
   title,
@@ -37,7 +37,7 @@ function ImageGalleryImage({
           tabIndex={0}
           role="button"
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
+            if (e.key === 'Enter') {
               onClick(e);
             }
           }}

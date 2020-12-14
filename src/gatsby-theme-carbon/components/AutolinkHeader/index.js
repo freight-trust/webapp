@@ -1,3 +1,3 @@
-import AutolinkHeader from "./AutolinkHeader";
+import AutolinkHeader from './AutolinkHeader';
 
 export default AutolinkHeader;

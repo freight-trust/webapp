@@ -1,3 +1,3 @@
-import PageDescription from "./PageDescription";
+import PageDescription from './PageDescription';
 
 export default PageDescription;

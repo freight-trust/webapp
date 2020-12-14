@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-import useScrollPosition from "./useScrollPosition";
-import useWindowSize from "./useWindowSize";
+import { useEffect, useRef, useState } from 'react';
+import useScrollPosition from './useScrollPosition';
+import useWindowSize from './useWindowSize';
 
 const useScrollDirection = () => {
   const { y } = useScrollPosition();
@@ -12,9 +12,9 @@ const useScrollDirection = () => {
     const pastPageHeader = y > 290;
     const scrollingDown = lastPosition.current && y >= lastPosition.current;
     if (pastPageHeader && scrollingDown) {
-      setDirection("down");
+      setDirection('down');
     } else {
-      setDirection("up");
+      setDirection('up');
     }
     lastPosition.current = y;
   }, [windowSize.innerWidth, y]);

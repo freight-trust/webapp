@@ -17,11 +17,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { Component } from "react";
-import { Modal, Button, TextInput, Loading } from "carbon-components-react";
-import { ChevronLeft20, CheckmarkOutline32 } from "@carbon/icons-react";
-import { BannerContainer } from "gatsby-theme-carbon/src/templates/HomepageComponents";
-import "./styles.scss";
+import React, { Component } from 'react';
+import { Modal, Button, TextInput, Loading } from 'carbon-components-react';
+import { ChevronLeft20, CheckmarkOutline32 } from '@carbon/icons-react';
+import { BannerContainer } from 'gatsby-theme-carbon/src/templates/HomepageComponents';
+import './styles.scss';
 
 const modalProps = [
   // Step 0

@@ -1,9 +1,9 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
-import { Column, Row } from "../Grid";
-import ArticleCard from "../ArticleCard";
-import { image, cardContainer } from "./MediumPosts.module.scss";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import { Column, Row } from '../Grid';
+import ArticleCard from '../ArticleCard';
+import { image, cardContainer } from './MediumPosts.module.scss';
 
 const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
   const data = useStaticQuery(graphql`

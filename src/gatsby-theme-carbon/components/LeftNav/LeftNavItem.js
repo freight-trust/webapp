@@ -15,20 +15,20 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { useContext } from "react";
-import { Link } from "gatsby";
-import { Location } from "@reach/router";
-import cx from "classnames";
+import React, { useContext } from 'react';
+import { Link } from 'gatsby';
+import { Location } from '@reach/router';
+import cx from 'classnames';
 import {
   SideNavLink,
   SideNavMenu,
   SideNavMenuItem,
-} from "carbon-components-react";
+} from 'carbon-components-react';
 
-import styles from "gatsby-theme-carbon/src/components/LeftNav/LeftNav.module.scss";
+import styles from 'gatsby-theme-carbon/src/components/LeftNav/LeftNav.module.scss';
 
-import NavContext from "gatsby-theme-carbon/src/util/context/NavContext";
-import usePathprefix from "gatsby-theme-carbon/src/util/hooks/usePathprefix";
+import NavContext from 'gatsby-theme-carbon/src/util/context/NavContext';
+import usePathprefix from 'gatsby-theme-carbon/src/util/hooks/usePathprefix';
 
 const LeftNavItem = (props) => {
   const { items, category, hasDivider, isSpace } = props;

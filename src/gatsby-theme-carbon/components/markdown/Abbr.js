@@ -1,6 +1,6 @@
-import React from "react";
-import { TooltipDefinition } from "carbon-components-react";
-import { abbr } from "./Markdown.module.scss";
+import React from 'react';
+import { TooltipDefinition } from 'carbon-components-react';
+import { abbr } from './Markdown.module.scss';
 
 // TODO add abbreviations remark plugin
 const Abbr = ({ title, children }) => (

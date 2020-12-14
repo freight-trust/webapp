@@ -1,10 +1,10 @@
-import React from "react";
-import cx from "classnames";
-import { list } from "./Markdown.module.scss";
+import React from 'react';
+import cx from 'classnames';
+import { list } from './Markdown.module.scss';
 
 const Ol = ({ children, nested, start, ...rest }) => {
-  const className = cx("bx--list--ordered", list, {
-    "bx--list--nested": nested,
+  const className = cx('bx--list--ordered', list, {
+    'bx--list--nested': nested,
   });
 
   return (
