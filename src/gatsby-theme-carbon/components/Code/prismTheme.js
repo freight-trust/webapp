@@ -5,105 +5,105 @@
 // Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 
 /* :: import type { PrismTheme } from '../src/types' */
-import { ui05 } from '@carbon/elements';
+import { ui05 } from "@carbon/elements";
 
 const theme /* : PrismTheme */ = {
   plain: {
     backgroundColor: ui05,
-    color: '#fff',
+    color: "#fff",
   },
   styles: [
     {
-      types: ['comment', 'prolog', 'doctype', 'cdata'],
+      types: ["comment", "prolog", "doctype", "cdata"],
       style: {
-        color: '#bebebe',
+        color: "#bebebe",
       },
     },
     {
-      types: ['namespace'],
+      types: ["namespace"],
       style: {
         opacity: 0.7,
       },
     },
     {
-      types: ['tag', 'operator'],
+      types: ["tag", "operator"],
       style: {
-        color: '#6ea6ff',
+        color: "#6ea6ff",
       },
     },
     {
-      types: ['property', 'function', 'attr-name'],
+      types: ["property", "function", "attr-name"],
       style: {
-        color: '#92eeee',
+        color: "#92eeee",
       },
     },
     {
-      types: ['variable'],
+      types: ["variable"],
       style: {
-        color: '#ffffff',
+        color: "#ffffff",
       },
     },
     {
-      types: ['string'],
+      types: ["string"],
       style: {
-        color: '#fa75a6',
+        color: "#fa75a6",
       },
     },
     {
-      types: ['entity'],
+      types: ["entity"],
       style: {
-        cursor: 'help',
+        cursor: "help",
       },
     },
     {
       types: [
-        'boolean',
-        'entity',
-        'url',
-        'attr-value',
-        'control',
-        'directive',
-        'unit',
-        'statement',
-        'regex',
-        'at-rule',
-        'selector',
-        'keyword',
-        'placeholder',
+        "boolean",
+        "entity",
+        "url",
+        "attr-value",
+        "control",
+        "directive",
+        "unit",
+        "statement",
+        "regex",
+        "at-rule",
+        "selector",
+        "keyword",
+        "placeholder",
       ],
       style: {
-        color: '#bb8eff',
+        color: "#bb8eff",
       },
     },
     {
-      types: ['deleted'],
+      types: ["deleted"],
       style: {
-        textDecorationLine: 'line-through',
+        textDecorationLine: "line-through",
       },
     },
     {
-      types: ['inserted'],
+      types: ["inserted"],
       style: {
-        borderBottom: '1px dotted #c22dd5',
-        textDecorationLine: 'underline',
+        borderBottom: "1px dotted #c22dd5",
+        textDecorationLine: "underline",
       },
     },
     {
-      types: ['italic'],
+      types: ["italic"],
       style: {
-        fontStyle: 'italic',
+        fontStyle: "italic",
       },
     },
     {
-      types: ['important', 'bold'],
+      types: ["important", "bold"],
       style: {
-        fontWeight: 'bold',
+        fontWeight: "bold",
       },
     },
     {
-      types: ['important'],
+      types: ["important"],
       style: {
-        color: '#c94922',
+        color: "#c94922",
       },
     },
   ],

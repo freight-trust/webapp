@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { Link } from 'gatsby';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import { Link } from "gatsby";
 import {
   Launch20,
   Download20,
   ArrowRight20,
   Error20,
   Email20,
-} from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+} from "@carbon/icons-react";
+import { settings } from "carbon-components";
 
 const { prefix } = settings;
 
@@ -33,23 +33,23 @@ export default class ImageCard extends React.Component {
 
     let isLink;
     if (href !== undefined) {
-      isLink = href.charAt(0) === '/';
+      isLink = href.charAt(0) === "/";
     }
 
     const ImageCardClassNames = classnames([`${prefix}--image-card`], {
       [className]: className,
       [`${prefix}--image-card--disabled`]: disabled,
-      [`${prefix}--image-card--dark`]: hoverColor === 'dark',
+      [`${prefix}--image-card--dark`]: hoverColor === "dark",
     });
 
     const aspectRatioClassNames = classnames(
       [`${prefix}--aspect-ratio`, `${prefix}--image-card__spacing`],
       {
-        [`${prefix}--aspect-ratio--2x1`]: aspectRatio === '2:1',
-        [`${prefix}--aspect-ratio--1x2`]: aspectRatio === '1:2',
-        [`${prefix}--aspect-ratio--1x1`]: aspectRatio === '1:1',
-        [`${prefix}--aspect-ratio--16x9`]: aspectRatio === '16:9',
-        [`${prefix}--aspect-ratio--4x3`]: aspectRatio === '4:3',
+        [`${prefix}--aspect-ratio--2x1`]: aspectRatio === "2:1",
+        [`${prefix}--aspect-ratio--1x2`]: aspectRatio === "1:2",
+        [`${prefix}--aspect-ratio--1x1`]: aspectRatio === "1:1",
+        [`${prefix}--aspect-ratio--16x9`]: aspectRatio === "16:9",
+        [`${prefix}--aspect-ratio--4x3`]: aspectRatio === "4:3",
       }
     );
 
@@ -58,15 +58,15 @@ export default class ImageCard extends React.Component {
     });
 
     const titleClassNames = classnames([`${prefix}--image-card__title`], {
-      [`${prefix}--image-card__title--dark`]: titleColor === 'dark',
+      [`${prefix}--image-card__title--dark`]: titleColor === "dark",
     });
 
     const subTitleClassNames = classnames([`${prefix}--image-card__subtitle`], {
-      [`${prefix}--image-card__subtitle--dark`]: subTitleColor === 'dark',
+      [`${prefix}--image-card__subtitle--dark`]: subTitleColor === "dark",
     });
 
     const iconClassNames = classnames([`${prefix}--image-card__icon--action`], {
-      [`${prefix}--image-card__icon--action--dark`]: iconColor === 'dark',
+      [`${prefix}--image-card__icon--action--dark`]: iconColor === "dark",
     });
 
     const cardContent = (
@@ -74,19 +74,19 @@ export default class ImageCard extends React.Component {
         {subTitle ? <h5 className={subTitleClassNames}>{subTitle}</h5> : null}
         {title ? <h4 className={titleClassNames}>{title}</h4> : null}
         <div className={iconClassNames}>
-          {actionIcon === 'launch' && !disabled ? (
+          {actionIcon === "launch" && !disabled ? (
             <Launch20 aria-label="Open resource" />
           ) : null}
-          {actionIcon === 'arrowRight' && !disabled ? (
+          {actionIcon === "arrowRight" && !disabled ? (
             <ArrowRight20 aria-label="Open resource" />
           ) : null}
-          {actionIcon === 'download' && !disabled ? (
+          {actionIcon === "download" && !disabled ? (
             <Download20 aria-label="Download" />
           ) : null}
-          {actionIcon === 'email' && !disabled ? (
+          {actionIcon === "email" && !disabled ? (
             <Email20 aria-label="Email" />
           ) : null}
-          {actionIcon === 'disabled' || disabled === true ? (
+          {actionIcon === "disabled" || disabled === true ? (
             <Error20 aria-label="disabled" />
           ) : null}
         </div>
@@ -109,7 +109,8 @@ export default class ImageCard extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
           href={href}
-          className={carbonTileclassNames}>
+          className={carbonTileclassNames}
+        >
           {cardContent}
         </a>
       );
@@ -193,9 +194,9 @@ ImageCard.propTypes = {
 
 ImageCard.defaultProps = {
   disabled: false,
-  aspectRatio: '1:1',
-  titleColor: 'light',
-  subTitleColor: 'light',
-  iconColor: 'light',
-  hoverColor: 'light',
+  aspectRatio: "1:1",
+  titleColor: "light",
+  subTitleColor: "light",
+  iconColor: "light",
+  hoverColor: "light",
 };

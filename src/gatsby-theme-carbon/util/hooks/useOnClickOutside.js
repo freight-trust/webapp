@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 let passiveListenerSupported;
 
 try {
-  const opts = Object.defineProperty({}, 'passive', {
+  const opts = Object.defineProperty({}, "passive", {
     // eslint-disable-next-line getter-return
     get() {
       passiveListenerSupported = true;
     },
   });
-  window.addEventListener('testPassive', null, opts);
-  window.removeEventListener('testPassive', null, opts);
+  window.addEventListener("testPassive", null, opts);
+  window.removeEventListener("testPassive", null, opts);
 } catch (e) {
   passiveListenerSupported = false;
 }
@@ -25,19 +25,19 @@ function useOnClickOutside(ref, handler) {
     };
 
     document.addEventListener(
-      'mousedown',
+      "mousedown",
       listener,
       passiveListenerSupported ? { passive: true } : false
     );
     document.addEventListener(
-      'touchstart',
+      "touchstart",
       listener,
       passiveListenerSupported ? { passive: true } : false
     );
 
     return () => {
-      document.removeEventListener('mousedown', listener);
-      document.removeEventListener('touchstart', listener);
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
     };
   }, [ref, handler]);
 }

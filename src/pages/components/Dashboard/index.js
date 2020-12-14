@@ -20,7 +20,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   DataTable,
   TableContainer,
@@ -43,14 +43,14 @@ import {
   Tag,
   OverflowMenu,
   OverflowMenuItem,
-} from 'carbon-components-react';
+} from "carbon-components-react";
 import {
   Delete16 as Delete,
   Save16 as Save,
   Download16 as Download,
-} from '@carbon/icons-react';
+} from "@carbon/icons-react";
 
-import './style.scss';
+import "./style.scss";
 
 const customRowData = [
   {
@@ -146,7 +146,8 @@ class Dashboard extends Component {
                         getBatchActionProps().shouldShowBatchActions ? 0 : -1
                       }
                       renderIcon={Delete}
-                      onClick={() => console.log(`clicked`)}>
+                      onClick={() => console.log(`clicked`)}
+                    >
                       Delete
                     </TableBatchAction>
                     <TableBatchAction
@@ -154,7 +155,8 @@ class Dashboard extends Component {
                         getBatchActionProps().shouldShowBatchActions ? 0 : -1
                       }
                       renderIcon={Save}
-                      onClick={() => console.log(`clicked`)}>
+                      onClick={() => console.log(`clicked`)}
+                    >
                       Save
                     </TableBatchAction>
                     <TableBatchAction
@@ -162,7 +164,8 @@ class Dashboard extends Component {
                         getBatchActionProps().shouldShowBatchActions ? 0 : -1
                       }
                       renderIcon={Download}
-                      onClick={() => console.log(`clicked`)}>
+                      onClick={() => console.log(`clicked`)}
+                    >
                       Download
                     </TableBatchAction>
                   </TableBatchActions>
@@ -176,14 +179,17 @@ class Dashboard extends Component {
                     <TableToolbarMenu
                       tabIndex={
                         getBatchActionProps().shouldShowBatchActions ? -1 : 0
-                      }>
+                      }
+                    >
                       <TableToolbarAction
                         primaryFocus
-                        onClick={() => console.log(`Alert 1`)}>
+                        onClick={() => console.log(`Alert 1`)}
+                      >
                         Show Details
                       </TableToolbarAction>
                       <TableToolbarAction
-                        onClick={() => console.log(`Alert 2`)}>
+                        onClick={() => console.log(`Alert 2`)}
+                      >
                         Clear all
                       </TableToolbarAction>
                     </TableToolbarMenu>
@@ -193,7 +199,8 @@ class Dashboard extends Component {
                       }
                       onClick={() => console.log(`clicked`)}
                       size="small"
-                      kind="primary">
+                      kind="primary"
+                    >
                       Add new
                     </Button>
                   </TableToolbarContent>
@@ -207,7 +214,8 @@ class Dashboard extends Component {
                           {...getHeaderProps({
                             header,
                           })}
-                          id={header.key}>
+                          id={header.key}
+                        >
                           {header.header}
                         </TableHeader>
                       ))}

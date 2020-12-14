@@ -1,11 +1,11 @@
 /* eslint-disable */
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { Link } from 'gatsby';
-import { settings } from 'carbon-components';
-import { Row, Column } from '../Grid';
-import ResourceCard from '../ResourceCard';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import { Link } from "gatsby";
+import { settings } from "carbon-components";
+import { Row, Column } from "../Grid";
+import ResourceCard from "../ResourceCard";
 
 const { prefix } = settings;
 
@@ -25,7 +25,7 @@ export default class FeatureCard extends React.Component {
 
     let isLink;
     if (href !== undefined) {
-      isLink = href.charAt(0) === '/';
+      isLink = href.charAt(0) === "/";
     }
 
     const FeatureCardClassNames = classnames([`${prefix}--feature-card`], {
@@ -38,9 +38,11 @@ export default class FeatureCard extends React.Component {
           {/* #906 */}
           <Column className={`${prefix}--feature-card__column`} noGutterMdLeft>
             <div
-              className={`${prefix}--aspect-ratio ${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}>
+              className={`${prefix}--aspect-ratio ${prefix}--feature-card__img ${prefix}--aspect-ratio--1x1`}
+            >
               <div
-                className={`${prefix}--aspect-ratio--object ${prefix}--feature-background`}>
+                className={`${prefix}--aspect-ratio--object ${prefix}--feature-background`}
+              >
                 {children}
               </div>
             </div>
@@ -53,7 +55,8 @@ export default class FeatureCard extends React.Component {
             offsetLg={8}
             offsetMd={4}
             noGutterMdLeft
-            className={`${prefix}--feature-card__column`}>
+            className={`${prefix}--feature-card__column`}
+          >
             <ResourceCard
               title={title}
               subTitle={subTitle}
@@ -82,7 +85,8 @@ export default class FeatureCard extends React.Component {
         <a
           className={`${prefix}--feature-card__link`}
           href={href}
-          {...resourceCardProps}>
+          {...resourceCardProps}
+        >
           {cardContent}
         </a>
       );
@@ -133,5 +137,5 @@ FeatureCard.propTypes = {
 
 FeatureCard.defaultProps = {
   disabled: false,
-  actionIcon: 'launch',
+  actionIcon: "launch",
 };

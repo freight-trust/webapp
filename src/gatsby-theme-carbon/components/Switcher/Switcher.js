@@ -17,10 +17,10 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { useContext } from 'react';
-import cx from 'classnames';
-import NavContext from 'gatsby-theme-carbon/src/util/context/NavContext';
-import { nav, open, divider, link, linkDisabled } from './Switcher.module.scss';
+import React, { useContext } from "react";
+import cx from "classnames";
+import NavContext from "gatsby-theme-carbon/src/util/context/NavContext";
+import { nav, open, divider, link, linkDisabled } from "./Switcher.module.scss";
 
 const Switcher = ({ children }) => {
   const { switcherIsOpen } = useContext(NavContext);
@@ -31,7 +31,8 @@ const Switcher = ({ children }) => {
       className={cx(nav, { [open]: switcherIsOpen })}
       aria-label="Freight Trust & Clearing"
       aria-expanded={switcherIsOpen}
-      tabIndex="-1">
+      tabIndex="-1"
+    >
       <ul>{children}</ul>
     </nav>
   );
@@ -61,7 +62,8 @@ export const SwitcherLink = ({
         tabIndex={switcherIsOpen ? 0 : `-1`}
         className={className}
         href="https://freight.page.link/request-information"
-        {...rest}>
+        {...rest}
+      >
         {children}
       </a>
     </li>

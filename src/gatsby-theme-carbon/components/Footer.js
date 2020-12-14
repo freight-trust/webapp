@@ -15,11 +15,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React from 'react';
-import { Button } from 'carbon-components-react';
-import { Row, Column } from 'gatsby-theme-carbon';
-import { useAuth } from 'react-use-auth';
-import cx from 'classnames';
+import React from "react";
+import { Button } from "carbon-components-react";
+import { Row, Column } from "gatsby-theme-carbon";
+import { useAuth } from "react-use-auth";
+import cx from "classnames";
 import {
   footerContent,
   footerContentDefault,
@@ -32,7 +32,7 @@ import {
   footerFollowSection,
   footerLinkColMobile,
   hideOnMobile,
-} from './Footer.module.scss';
+} from "./Footer.module.scss";
 
 const ProductFooter = (
   <div>
@@ -83,7 +83,8 @@ const CustomFooter = ({ homepage }) => {
           colMd={3}
           colLg={3}
           colXl={3}
-          className={footerLinkCol}>
+          className={footerLinkCol}
+        >
           <h1>Freight Trust & Clearing</h1>
         </Column>
 
@@ -101,7 +102,8 @@ const CustomFooter = ({ homepage }) => {
           colMd={0}
           colLg={0}
           colXl={0}
-          className={footerLinkColMobile}>
+          className={footerLinkColMobile}
+        >
           <div className={footerLinkCol}>
             {SolutionsFooter}
             {ResourcesFooter}
@@ -113,7 +115,8 @@ const CustomFooter = ({ homepage }) => {
           colMd={2}
           colLg={2}
           colXl={1}
-          className={footerButtonCol}>
+          className={footerButtonCol}
+        >
           {/* <div>
             <Button>Register</Button>
           </div> */}
@@ -159,13 +162,13 @@ const CustomFooter = ({ homepage }) => {
         <Column colMd={6} colLg={6}>
           <div className={footerFollowSection}>
             <span>
-              <a href="/terms-of-service">Terms of Service{` `}</a>
+              <a href="https://github.com/freight-trust/legal/blob/master/src/terms-of-service.md">Terms of Service{` `}</a>
             </span>
             <span>
-              <a href="/privacy-policy">Privacy Policy{` `}</a>
+              <a href="https://github.com/freight-trust/legal/blob/master/src/privacy-policy.md">Privacy Policy{` `}</a>
             </span>
             <span>
-              <a href="/security">Security{` `}</a>
+              <a href="https://github.com/freight-trust/legal/blob/master/src/disclaimer.md">Disclaimer{` `}</a>
             </span>
           </div>
         </Column>

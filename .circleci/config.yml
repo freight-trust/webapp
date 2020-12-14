@@ -41,9 +41,9 @@ jobs:
       - attach_gatsby
       - run:
           name: Build packages
-          command: yarn install 
+          command: yarn install
       - run:
-          name: Yarn Gatsby Build 
+          name: Yarn Gatsby Build
           command: yarn run build
 
 workflows:

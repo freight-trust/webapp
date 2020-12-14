@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from "gatsby";
 
 const usePathprefix = () => {
   const data = useStaticQuery(graphql`

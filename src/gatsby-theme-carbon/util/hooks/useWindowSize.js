@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import _throttle from 'lodash.throttle';
+import { useState, useEffect } from "react";
+import _throttle from "lodash.throttle";
 
 const getWindowSize = () => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     return {
       innerHeight: window.innerHeight,
       innerWidth: window.innerWidth,
@@ -31,11 +31,11 @@ function useWindowSize() {
     const handleResize = _throttle(() => {
       setWindowSize(getWindowSize());
     }, 100);
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       handleResize.cancel();
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

@@ -43,7 +43,7 @@ module.exports.handler = (event, context, callback) => {
       body: subscriber,
       headers: {
         Authorization: `apikey ${mailChimpAPI}`,
-        'Content-Type': `application/json`,
+        "Content-Type": `application/json`,
       },
     },
     (error, response, body) => {
@@ -63,9 +63,9 @@ module.exports.handler = (event, context, callback) => {
         callback(null, {
           statusCode: 201,
           headers: {
-            'Content-Type': `application/json`,
-            'Access-Control-Allow-Origin': `*`,
-            'Access-Control-Allow-Credentials': `true`,
+            "Content-Type": `application/json`,
+            "Access-Control-Allow-Origin": `*`,
+            "Access-Control-Allow-Credentials": `true`,
           },
           body: JSON.stringify({
             status: `saved email`,

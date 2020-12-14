@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState } from "react";
 
 const NavContext = React.createContext({
   leftNavIsOpen: false,
@@ -10,9 +10,9 @@ const NavContext = React.createContext({
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'open':
+    case "open":
       return { ...state, [action.nav]: true };
-    case 'close':
+    case "close":
       return { ...state, [action.nav]: false };
     default:
       return { ...state, [action.nav]: !state[action.nav] };

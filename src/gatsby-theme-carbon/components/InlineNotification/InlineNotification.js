@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { InlineNotification as CarbonInlineNotification } from 'carbon-components-react';
-import { Row, Column } from '../Grid';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import { InlineNotification as CarbonInlineNotification } from "carbon-components-react";
+import { Row, Column } from "../Grid";
 
-import { notification } from './InlineNotification.module.scss';
+import { notification } from "./InlineNotification.module.scss";
 
 export default class InlineNotification extends React.Component {
   render() {
@@ -33,9 +33,9 @@ export default class InlineNotification extends React.Component {
 InlineNotification.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  kind: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
+  kind: PropTypes.oneOf(["error", "info", "success", "warning"]),
 };
 
 InlineNotification.defaultProps = {
-  kind: 'info',
+  kind: "info",
 };

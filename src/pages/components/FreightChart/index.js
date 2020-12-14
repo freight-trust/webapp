@@ -16,7 +16,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from "react";
 import {
   AreaChart,
   Area,
@@ -29,9 +29,9 @@ import {
   LineChart,
   Bar,
   Line,
-} from 'recharts';
-import { Row, Column } from 'gatsby-theme-carbon';
-import { TextInput } from 'carbon-components-react';
+} from "recharts";
+import { Row, Column } from "gatsby-theme-carbon";
+import { TextInput } from "carbon-components-react";
 import {
   charts,
   mainChart,
@@ -43,7 +43,7 @@ import {
   chartControl,
   dateControl,
   rangeControl,
-} from './FreightChart.module.scss';
+} from "./FreightChart.module.scss";
 
 class FreightChart extends PureComponent {
   render() {
@@ -85,7 +85,8 @@ class FreightChart extends PureComponent {
               width={795}
               height={300}
               data={this.data}
-              margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+              margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+            >
               <defs>
                 <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#27D974" stopOpacity={0.8} />
@@ -112,7 +113,8 @@ class FreightChart extends PureComponent {
                 dataKey="date"
                 fillOpacity={1}
                 fill="none"
-                stroke="#c6c6c6">
+                stroke="#c6c6c6"
+              >
                 <AreaChart
                   width={750}
                   height={50}
@@ -122,7 +124,8 @@ class FreightChart extends PureComponent {
                     right: 30,
                     left: 0,
                     bottom: 0,
-                  }}>
+                  }}
+                >
                   <defs>
                     <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#27D974" stopOpacity={0.8} />
@@ -173,7 +176,8 @@ class FreightChart extends PureComponent {
                         right: 30,
                         left: 0,
                         bottom: 0,
-                      }}>
+                      }}
+                    >
                       <CartesianGrid vertical={false} />
                       <XAxis
                         dataKey="date"
@@ -217,7 +221,8 @@ class FreightChart extends PureComponent {
                         right: 30,
                         left: -15,
                         bottom: 0,
-                      }}>
+                      }}
+                    >
                       <CartesianGrid vertical={false} />
                       <XAxis
                         dataKey="date"

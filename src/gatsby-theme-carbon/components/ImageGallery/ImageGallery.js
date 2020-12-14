@@ -1,12 +1,12 @@
-import React, { useState, useEffect, Children } from 'react';
-import ReactDOM from 'react-dom';
-import { breakpoints } from '@carbon/elements';
-import { ChevronRight32, ChevronLeft32, Close32 } from '@carbon/icons-react';
-import cx from 'classnames';
-import FocusTrap from 'focus-trap-react';
-import useMedia from 'use-media';
-import PropTypes from 'prop-types';
-import { Grid, Row, Column } from '../Grid';
+import React, { useState, useEffect, Children } from "react";
+import ReactDOM from "react-dom";
+import { breakpoints } from "@carbon/elements";
+import { ChevronRight32, ChevronLeft32, Close32 } from "@carbon/icons-react";
+import cx from "classnames";
+import FocusTrap from "focus-trap-react";
+import useMedia from "use-media";
+import PropTypes from "prop-types";
+import { Grid, Row, Column } from "../Grid";
 import {
   galleryContainer,
   inDialogGalleryContainer,
@@ -20,7 +20,7 @@ import {
   rightNav,
   leftNav,
   addNoScroll,
-} from './ImageGallery.module.scss';
+} from "./ImageGallery.module.scss";
 
 function ImageGallery({ children }) {
   const [portalsNode, updateNode] = useState(null);
@@ -37,7 +37,7 @@ function ImageGallery({ children }) {
 
   // Creates the node to go into the portalsNode state.
   useEffect(() => {
-    const node = document.createElement('div');
+    const node = document.createElement("div");
     document.body.appendChild(node);
     updateNode(node);
 
@@ -102,15 +102,15 @@ function ImageGallery({ children }) {
   }
 
   function onKeyDown(event) {
-    if (event.key === 'Escape') {
+    if (event.key === "Escape") {
       closeGallery();
       return;
     }
-    if (event.key === 'ArrowLeft') {
+    if (event.key === "ArrowLeft") {
       selectPrevImage();
       return;
     }
-    if (event.key === 'ArrowRight') {
+    if (event.key === "ArrowRight") {
       selectNextImage();
     }
   }
@@ -136,32 +136,35 @@ function ImageGallery({ children }) {
             <div
               role="group"
               className={inDialogGalleryContainer}
-              onKeyDown={onKeyDown}>
+              onKeyDown={onKeyDown}
+            >
               <Row>
                 <Column colLg={2}>
                   <button
                     type="button"
                     className={closeButton}
-                    onClick={closeGallery}>
+                    onClick={closeGallery}
+                  >
                     <Close32 className={icon} />
                   </button>
                 </Column>
               </Row>
-              <Grid className={cx('bx--grid--full-width', galleryGrid)}>
+              <Grid className={cx("bx--grid--full-width", galleryGrid)}>
                 <Row className={galleryRow}>
                   <Column colLg={3} className={navButtonsContainer}>
                     {activeImageIndex - 1 >= 0 && (
                       <button
                         type="button"
                         className={leftNavButton}
-                        onClick={selectPrevImage}>
+                        onClick={selectPrevImage}
+                      >
                         <ChevronLeft32 className={icon} />
                       </button>
                     )}
                   </Column>
                   <Column colLg={6}>
                     {childrenAsArray[activeImageIndex].props.children.props
-                      .mdxType === 'GifPlayer'
+                      .mdxType === "GifPlayer"
                       ? React.cloneElement(
                           childrenAsArray[activeImageIndex].props.children,
                           {
@@ -177,7 +180,8 @@ function ImageGallery({ children }) {
                       <button
                         type="button"
                         className={rightNavButton}
-                        onClick={selectNextImage}>
+                        onClick={selectNextImage}
+                      >
                         <ChevronRight32 className={icon} />
                       </button>
                     )}

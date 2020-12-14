@@ -1,23 +1,23 @@
-import { useState, useEffect } from 'react';
-import _throttle from 'lodash.throttle';
+import { useState, useEffect } from "react";
+import _throttle from "lodash.throttle";
 
 let passiveListenerSupported;
 
 try {
-  const opts = Object.defineProperty({}, 'passive', {
+  const opts = Object.defineProperty({}, "passive", {
     // eslint-disable-next-line getter-return
     get() {
       passiveListenerSupported = true;
     },
   });
-  window.addEventListener('testPassive', null, opts);
-  window.removeEventListener('testPassive', null, opts);
+  window.addEventListener("testPassive", null, opts);
+  window.removeEventListener("testPassive", null, opts);
 } catch (e) {
   passiveListenerSupported = false;
 }
 
 const getPosition = () => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     return {
       x: window.pageXOffset,
       y: window.pageYOffset,
@@ -38,14 +38,14 @@ const useScrollPosition = () => {
     }, 200);
 
     window.addEventListener(
-      'scroll',
+      "scroll",
       handleScroll,
       passiveListenerSupported ? { passive: true } : false
     );
 
     return () => {
       handleScroll.cancel();
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

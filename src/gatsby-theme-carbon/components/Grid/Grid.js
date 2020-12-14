@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { settings } from 'carbon-components';
-import { column } from './Grid.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import { settings } from "carbon-components";
+import { column } from "./Grid.module.scss";
 
 const { prefix } = settings;
 

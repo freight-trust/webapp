@@ -1,9 +1,9 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import { Column, Row } from '../Grid';
-import ArticleCard from '../ArticleCard';
-import { image, cardContainer } from './MediumPosts.module.scss';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import PropTypes from "prop-types";
+import { Column, Row } from "../Grid";
+import ArticleCard from "../ArticleCard";
+import { image, cardContainer } from "./MediumPosts.module.scss";
 
 const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
   const data = useStaticQuery(graphql`
@@ -33,14 +33,16 @@ const MediumPosts = ({ postLimit = 3, cardProps, ...rest }) => {
           colMd={4}
           colLg={4}
           noGutterMdLeft
-          className={cardContainer}>
+          className={cardContainer}
+        >
           <ArticleCard
             title={latestPost.title}
             author={latestPost.author}
             href={latestPost.link}
             date={latestPost.date}
             color="dark"
-            {...cardProps}>
+            {...cardProps}
+          >
             <img
               alt={latestPost.title}
               src={latestPost.thumbnail}

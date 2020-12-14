@@ -15,20 +15,20 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { useContext } from 'react';
-import { Link } from 'gatsby';
-import { Location } from '@reach/router';
-import cx from 'classnames';
+import React, { useContext } from "react";
+import { Link } from "gatsby";
+import { Location } from "@reach/router";
+import cx from "classnames";
 import {
   SideNavLink,
   SideNavMenu,
   SideNavMenuItem,
-} from 'carbon-components-react';
+} from "carbon-components-react";
 
-import styles from 'gatsby-theme-carbon/src/components/LeftNav/LeftNav.module.scss';
+import styles from "gatsby-theme-carbon/src/components/LeftNav/LeftNav.module.scss";
 
-import NavContext from 'gatsby-theme-carbon/src/util/context/NavContext';
-import usePathprefix from 'gatsby-theme-carbon/src/util/hooks/usePathprefix';
+import NavContext from "gatsby-theme-carbon/src/util/context/NavContext";
+import usePathprefix from "gatsby-theme-carbon/src/util/hooks/usePathprefix";
 
 const LeftNavItem = (props) => {
   const { items, category, hasDivider, isSpace } = props;
@@ -63,7 +63,8 @@ const LeftNavItem = (props) => {
                   [styles.currentItem]: isActive,
                 })}
                 isActive={isActive}
-                to={`${items[0].path}`}>
+                to={`${items[0].path}`}
+              >
                 {category}
               </SideNavLink>
               {hasDivider && <hr className={styles.divider} />}
@@ -76,7 +77,8 @@ const LeftNavItem = (props) => {
               icon={<span>dummy icon</span>}
               isActive={isActive} // TODO similar categories
               defaultExpanded={isActive}
-              title={category}>
+              title={category}
+            >
               <SubNavItems
                 onClick={closeLeftNav}
                 items={items}
@@ -105,11 +107,13 @@ const SubNavItems = ({ items, pathname, onClick }) =>
         onClick={onClick}
         element={Link}
         isActive={hasActiveTab}
-        key={i}>
+        key={i}
+      >
         <span
           className={cx(styles.linkText, {
             [styles.linkText__active]: hasActiveTab,
-          })}>
+          })}
+        >
           {item.title}
         </span>
       </SideNavMenuItem>
